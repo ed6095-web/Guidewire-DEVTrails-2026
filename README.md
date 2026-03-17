@@ -31,7 +31,7 @@ pie title Weekly Income Loss Due to Environmental Disruptions
 
 ---
 
-# 💡 Proposed Concept: ShieldGig
+# Proposed Concept: ShieldGig
 
 **ShieldGig** is a **parametric micro-insurance platform** designed specifically for gig delivery workers.
 
@@ -45,13 +45,13 @@ If environmental conditions stop gig workers from working, the system **automati
 
 ---
 
-# ⚙️ Core System Pillars
+#  Core System Pillars
 
-### 1️⃣ Weekly Micro-Premiums
+### 1️. Weekly Micro-Premiums
 
 A subscription model aligned with the **weekly payout cycle** of gig workers.
 
-### 2️⃣ Algorithmic Risk Scoring
+### 2️. Algorithmic Risk Scoring
 
 Premiums dynamically adjust using:
 
@@ -59,19 +59,19 @@ Premiums dynamically adjust using:
 - Historical disruption data
 - Geographic vulnerability analysis
 
-### 3️⃣ Zero-Touch Claims
+### 3️. Zero-Touch Claims
 
 No paperwork or claim forms.
 
 The system automatically detects disruptions using **external data APIs**.
 
-### 4️⃣ Instant Wallet Payouts
+### 4️. Instant Wallet Payouts
 
 Compensation is credited directly to the **worker’s digital wallet**.
 
 ---
 
-# 👤 Target User Persona
+# Target User Persona
 
 Phase 1 focuses on **Food Delivery Partners**.
 
@@ -84,7 +84,7 @@ Phase 1 focuses on **Food Delivery Partners**.
 
 ---
 
-# 📖 Workflow Scenario
+# Workflow Scenario
 
 ### Example Case
 
@@ -94,19 +94,19 @@ A sudden monsoon flood stops deliveries in his area for **two days**, causing **
 
 ### ShieldGig Protocol
 
-1️⃣ Weather API detects **extreme rainfall**
+1️. Weather API detects **extreme rainfall**
 
-2️⃣ Parametric trigger validates the condition
+2️. Parametric trigger validates the condition
 
-3️⃣ System automatically initiates payout
+3️. System automatically initiates payout
 
-4️⃣ Rahul receives **₹800 compensation instantly**
+4️. Rahul receives **₹800 compensation instantly**
 
 No manual claim required.
 
 ---
 
-# 🏗 System Architecture
+# System Architecture
 
 <p align="center">
 <img src="images/architecture.png" width="850">
@@ -137,7 +137,11 @@ External data sources:
 
 - OpenWeather API  
 - Government AQI APIs  
-- Disaster alert systems  
+- Disaster alert systems
+
+**AI Agent**
+
+We will train our own AI agent 
 
 **Trigger Engine**
 
@@ -149,7 +153,7 @@ Simulated payout system using **Razorpay Sandbox**.
 
 ---
 
-# 🚨 Parametric Triggers & Payout Logic
+# Parametric Triggers & Payout Logic
 
 These thresholds enable **automated and transparent payouts**.
 
@@ -171,7 +175,7 @@ xychart-beta
 
 ---
 
-# 💰 Weekly Premium Model
+# Weekly Premium Model
 
 Premiums are calculated weekly to match the worker’s payment cycle.
 
@@ -185,9 +189,9 @@ Premiums dynamically adjust based on **location risk score**.
 
 ---
 
-# 🤖 AI & Logic Integration Strategy
+#  AI & Logic Integration Strategy
 
-### 1️⃣ Risk Prediction Engine
+### 1️ Risk Prediction Engine
 
 Machine learning models analyze:
 
@@ -202,7 +206,7 @@ Technologies:
 
 ---
 
-### 2️⃣ Dynamic Pricing Logic
+### 2️ Dynamic Pricing Logic
 
 Premiums automatically scale according to:
 
@@ -214,7 +218,7 @@ Lower risk areas → cheaper premiums.
 
 ---
 
-### 3️⃣ Fraud Detection
+### 3️ Fraud Detection
 
 The system prevents abuse by validating:
 
@@ -224,7 +228,7 @@ The system prevents abuse by validating:
 
 ---
 
-# 🧰 Technology Stack
+#  Technology Stack
 
 | Layer | Technology |
 |------|-----------|
@@ -237,7 +241,7 @@ The system prevents abuse by validating:
 
 ---
 
-# 🗺 Development Roadmap
+#  Development Roadmap
 
 ### Phase 1 (Current)
 
@@ -264,7 +268,7 @@ The system prevents abuse by validating:
 
 ---
 
-# 👨‍💻 Team
+# Team
 
 | Member | Role |
 |------|------|
@@ -276,7 +280,7 @@ The system prevents abuse by validating:
 
 ---
 
-# 🎯 Vision
+# Vision
 
 ShieldGig aims to become the **first automated income protection system for gig workers**.
 
