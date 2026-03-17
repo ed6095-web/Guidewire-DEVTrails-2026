@@ -127,7 +127,7 @@ To prevent system abuse, the logic will cross-reference:
 ## 👥 Team
 
 * **Eashan Darsh** - System Architecture & Frontend
-* *(Ved Deshmukh)* - *(Resarch)*
-* *(Shashwat Chaturvedi)* - *(Backend)*
-* *(Sneha Basera)* - *(Data Collection)*
-* *(Asim Shankar)* - *(AI/ML)*
+* **Ved Deshmukh** - Research
+* **Shashwat Chaturvedi** - Backend
+* **Sneha Basera** - Data Collection
+* **Asim Shankar** - AI/ML
