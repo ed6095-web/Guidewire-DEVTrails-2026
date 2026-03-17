@@ -1,254 +1,285 @@
-<div align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=00FFCC&center=true&vCenter=true&width=800&lines=ShieldGig;AI-Powered+Income+Protection;Parametric+Insurance+System" />
-
-Phase 1 Strategy & System Concept
-
-A data-driven financial safety net for India’s gig economy
-
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=00FFCC&center=true&vCenter=true&width=800&lines=ShieldGig;AI-Powered+Income+Protection;Parametric+Insurance+System" alt="Animated Header" />
 </div>
-📌 Problem Statement
 
-India's gig economy depends heavily on delivery partners who earn money only when deliveries are completed.
+<p align="center">
+  <b>Phase 1 Strategy & System Concept</b><br>
+  <i>A data-driven safety net for India's gig economy</i>
+</p>
 
-However, workers face income loss due to uncontrollable external disruptions, such as:
+---
 
-🌧 Heavy Rain
+# 📌 Problem Statement
 
-🌡 Extreme Heatwaves
+India’s gig economy relies on **delivery partners** who earn daily wages strictly based on completed deliveries.
 
-🌫 Severe Air Pollution
+However, workers face income loss due to **uncontrollable environmental disruptions** such as:
 
-🚧 Government Curfews
+- 🌧 Heavy Rain  
+- 🌡 Extreme Heatwaves  
+- 🌫 Severe Air Pollution  
+- 🚧 Government Curfews  
+- 🌊 Flood Alerts  
 
-🌊 Flood Alerts
+During such events, workers may lose **20–30% of their weekly income**, and currently there is **no dedicated protection system** for this type of disruption.
 
-During these events, workers often lose 20–30% of their weekly income, and no system currently protects them from this type of disruption.
-
+```mermaid
 pie title Weekly Income Loss Due to Environmental Disruptions
     "Retained Earnings" : 70
-    "Income Lost to Weather" : 30
-💡 Proposed Solution: ShieldGig
+    "Income Lost to Weather/Disruptions" : 30
+```
 
-ShieldGig is a parametric micro-insurance platform designed specifically for gig delivery workers.
+---
 
-Instead of traditional insurance claims, the system uses automated environmental triggers from trusted APIs.
+# 💡 Proposed Concept: ShieldGig
 
-When certain conditions occur, payouts are triggered automatically without requiring manual claims.
+**ShieldGig** is a **parametric micro-insurance platform** designed specifically for gig delivery workers.
 
-Core Idea
+Instead of traditional manual claim processes, the system uses **automated environmental triggers** powered by trusted APIs.
 
-If weather or government restrictions stop gig workers from working, the system automatically compensates part of their lost income.
+When certain environmental thresholds are crossed, **payouts are automatically triggered**.
 
-⚙️ Core System Pillars
-1️⃣ Weekly Micro-Premiums
+### Core Idea
 
-Small subscription payments aligned with the weekly payout cycle of gig workers.
+If environmental conditions stop gig workers from working, the system **automatically compensates a portion of their lost income.**
 
-2️⃣ Algorithmic Risk Scoring
+---
 
-Premiums dynamically adjust based on:
+# ⚙️ Core System Pillars
 
-Local weather risk
+### 1️⃣ Weekly Micro-Premiums
 
-Historical disaster data
+A subscription model aligned with the **weekly payout cycle** of gig workers.
 
-Geographic vulnerability
+### 2️⃣ Algorithmic Risk Scoring
 
-3️⃣ Zero-Touch Claims
+Premiums dynamically adjust using:
 
-No forms, no claim process.
+- Weather forecasts
+- Historical disruption data
+- Geographic vulnerability analysis
 
-When an event occurs, the system detects it automatically.
+### 3️⃣ Zero-Touch Claims
 
-4️⃣ Instant Wallet Payouts
+No paperwork or claim forms.
 
-Compensation is directly credited to the worker’s digital wallet.
+The system automatically detects disruptions using **external data APIs**.
 
-👤 Target User Persona
+### 4️⃣ Instant Wallet Payouts
 
-For Phase 1, the system is designed for food delivery partners.
+Compensation is credited directly to the **worker’s digital wallet**.
 
-Category	Details
-Platforms	Swiggy, Zomato
-Age Group	18 – 35
-Daily Earnings	₹600 – ₹900
-Payment Cycle	Weekly
-📖 Example Workflow
-Scenario
+---
 
-Rahul is a delivery partner earning ₹5,000 per week.
+# 👤 Target User Persona
 
-A heavy monsoon flood stops deliveries in his zone for 2 days, causing a ₹1,500 income loss.
+Phase 1 focuses on **Food Delivery Partners**.
 
-ShieldGig Response
+| Category | Details |
+|--------|--------|
+| Platforms | Swiggy, Zomato |
+| Age Group | 18–35 |
+| Daily Earnings | ₹600 – ₹900 |
+| Payment Cycle | Weekly |
 
-1️⃣ Weather API detects extreme rainfall
+---
 
-2️⃣ Parametric trigger condition is validated
+# 📖 Workflow Scenario
 
-3️⃣ System automatically processes payout
+### Example Case
 
-4️⃣ Rahul receives ₹800 compensation instantly
+Rahul is a delivery partner earning **₹5000 per week**.
 
-No claims.
-No paperwork.
-No delays.
+A sudden monsoon flood stops deliveries in his area for **two days**, causing **₹1500 income loss**.
 
-🏗️ System Architecture
-<p align="center"> <img src="images/architecture.png" width="850"> </p>
-Architecture Components
+### ShieldGig Protocol
 
-Client Interface
+1️⃣ Weather API detects **extreme rainfall**
 
-Worker dashboard
+2️⃣ Parametric trigger validates the condition
 
-Policy registration
+3️⃣ System automatically initiates payout
 
-Coverage tracking
+4️⃣ Rahul receives **₹800 compensation instantly**
 
-Backend Node
+No manual claim required.
 
-User policy management
+---
 
-API polling
+# 🏗 System Architecture
 
-Trigger evaluation
+<p align="center">
+<img src="images/architecture.png" width="850">
+</p>
 
-Risk Engine
+### Architecture Components
 
-Calculates geographic risk scores
+**Client Interface**
 
-Determines premium pricing
+- Worker dashboard  
+- Policy registration  
+- Coverage tracking  
 
-Data Oracles
-External trusted data sources:
+**Backend Node**
 
-OpenWeather API
+- Policy management  
+- API polling  
+- Event monitoring  
 
-Government AQI API
+**Risk Engine**
 
-Disaster alert APIs
+- Calculates geographic risk scores  
+- Determines dynamic premium pricing  
 
-Trigger Engine
-Evaluates incoming environmental data against predefined thresholds.
+**Data Oracles**
 
-Payment Gateway
-Simulates automated payout via Razorpay sandbox.
+External data sources:
 
-🚨 Parametric Triggers & Payout Logic
+- OpenWeather API  
+- Government AQI APIs  
+- Disaster alert systems  
 
-These triggers ensure transparent and automated payouts.
+**Trigger Engine**
 
+Evaluates incoming environmental data against **parametric rules**.
+
+**Payment Gateway**
+
+Simulated payout system using **Razorpay Sandbox**.
+
+---
+
+# 🚨 Parametric Triggers & Payout Logic
+
+These thresholds enable **automated and transparent payouts**.
+
+```mermaid
 xychart-beta
     title "Automated Payout Matrix (₹)"
     x-axis ["Rain >50mm","Heat >45°C","Flood Alert","AQI >400","Curfew"]
-    y-axis "Payout" 0 --> 600
+    y-axis "Payout Amount (₹)" 0 --> 600
     bar [300,200,400,150,500]
-Disruption Event	API Condition	Payout
-🌧 Heavy Rain	Rainfall > 50mm	₹300
-🌡 Extreme Heat	Temperature > 45°C	₹200
-🌊 Flood Alert	Govt flood alert = TRUE	₹400
-🌫 Severe Pollution	AQI > 400	₹150
-🚧 Curfew	Geo-fenced restriction	₹500
-💰 Weekly Premium Model
+```
 
-Premiums are calculated weekly to match the gig worker payment cycle.
+| Disruption Event | API Condition | Automated Payout |
+|---|---|---|
+| 🌧 Heavy Rain | Rainfall > 50mm | ₹300 |
+| 🌡 Extreme Heat | Temperature > 45°C | ₹200 |
+| 🌊 Flood Alert | Government Flood Alert | ₹400 |
+| 🌫 Severe Pollution | AQI > 400 | ₹150 |
+| 🚧 Curfew | Geo-fenced restriction | ₹500 |
 
-Tier	Weekly Premium	Max Coverage
-Basic	₹20	Up to ₹1000
-Standard	₹35	Up to ₹2000
-Pro	₹50	Up to ₹3500
+---
 
-Premiums dynamically adjust based on location risk score.
+# 💰 Weekly Premium Model
 
-🤖 AI & Logic Integration
-1️⃣ Risk Prediction Engine
+Premiums are calculated weekly to match the worker’s payment cycle.
+
+| Tier | Weekly Premium | Maximum Coverage |
+|----|----|----|
+| Basic | ₹20 | Up to ₹1000 |
+| Standard | ₹35 | Up to ₹2000 |
+| Pro | ₹50 | Up to ₹3500 |
+
+Premiums dynamically adjust based on **location risk score**.
+
+---
+
+# 🤖 AI & Logic Integration Strategy
+
+### 1️⃣ Risk Prediction Engine
 
 Machine learning models analyze:
 
-Historical weather patterns
+- Historical weather patterns  
+- Flood-prone regions  
+- Seasonal disruptions  
 
-Flood zones
+Technologies:
 
-Seasonal risk
+- Python  
+- Scikit-learn  
 
-Tools:
+---
 
-Python
+### 2️⃣ Dynamic Pricing Logic
 
-Scikit-learn
+Premiums automatically scale according to:
 
-2️⃣ Dynamic Premium Pricing
+- Geographic risk
+- Weather probability
+- Disaster likelihood
 
-Premiums change based on:
+Lower risk areas → cheaper premiums.
 
-Geographic risk
+---
 
-Weather forecasts
+### 3️⃣ Fraud Detection
 
-Disaster probability
+The system prevents abuse by validating:
 
-Lower risk zones → cheaper premiums.
+- GPS location vs disruption zones  
+- User reports vs API data  
+- Duplicate payout patterns  
 
-3️⃣ Fraud Detection System
+---
 
-To prevent misuse:
+# 🧰 Technology Stack
 
-The system cross-checks:
+| Layer | Technology |
+|------|-----------|
+| Frontend | React.js / Next.js |
+| Backend | Node.js + Express |
+| Database | MongoDB |
+| AI / ML | Python, Scikit-learn |
+| APIs | OpenWeather API, AQI API |
+| Payment Simulation | Razorpay Sandbox |
 
-📍 GPS location vs disruption zones
+---
 
-🌧 API weather vs user reports
+# 🗺 Development Roadmap
 
-🧾 Duplicate claim patterns
+### Phase 1 (Current)
 
-🧰 Technology Stack
-Layer	Technology
-Frontend	React.js / Next.js
-Backend	Node.js + Express
-Database	MongoDB
-AI/ML	Python, Scikit-learn
-APIs	OpenWeather API, AQI API
-Payment Simulation	Razorpay Sandbox
-🗺 Development Roadmap
-Phase 1 (Current)
+- Concept design  
+- Architecture planning  
+- Parametric trigger modeling  
+- Hackathon submission  
 
-Concept design
+---
 
-Parametric trigger modeling
+### Phase 2
 
-Architecture planning
+- Backend development  
+- API integration  
+- Risk engine training  
 
-Hackathon submission
+---
 
-Phase 2
+### Phase 3
 
-API integration
+- Real-time payout automation  
+- Fraud detection system  
+- Full prototype deployment  
 
-Backend logic development
+---
 
-Risk engine implementation
+# 👨‍💻 Team
 
-Phase 3
+| Member | Role |
+|------|------|
+| **Eashan Darsh** | System Architecture & Frontend |
+| **Ved Deshmukh** | Research |
+| **Shashwat Chaturvedi** | Backend |
+| **Sneha Basera** | Data Collection |
+| **Asim Shankar** | AI / ML |
 
-Real-time event detection
+---
 
-Fraud detection models
+# 🎯 Vision
 
-Wallet payout simulation
+ShieldGig aims to become the **first automated income protection system for gig workers**.
 
-Full system prototype
+As gig economies grow, millions remain financially vulnerable to **environmental disruptions**.
 
-👨‍💻 Team
-Member	Role
-Eashan Darsh	System Architecture & Frontend
-Ved Deshmukh	Research
-Shashwat Chaturvedi	Backend Development
-Sneha Basera	Data Collection
-Asim Shankar	AI / ML
-🎯 Vision
-
-ShieldGig aims to create the first automated income protection system for gig workers.
-
-As gig economies grow globally, millions of workers remain financially vulnerable to environmental disruptions.
-
-ShieldGig transforms insurance into a real-time financial safety net powered by data and automation.
+ShieldGig converts insurance into a **real-time, data-driven financial safety net**.
