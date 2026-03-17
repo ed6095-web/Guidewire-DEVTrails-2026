@@ -31,6 +31,25 @@ pie title Weekly Income Loss Due to Environmental Disruptions
 
 ---
 
+# Why This Matters
+
+India currently has **7+ million gig workers**, and the number is growing rapidly with platforms like **Swiggy, Zomato, Blinkit, and Zepto**.
+
+Most of these workers depend on **daily earnings to survive**, meaning even **1–2 days of disruption** can significantly affect their financial stability.
+
+Environmental disruptions such as:
+
+- Floods
+- Heatwaves
+- Severe pollution
+- Government restrictions
+
+can **instantly halt deliveries**, leaving workers without income.
+
+ShieldGig aims to create a **financial safety net** that protects gig workers from these unpredictable events through **automated parametric insurance**.
+
+---
+
 # Proposed Concept: ShieldGig
 
 **ShieldGig** is a **parametric micro-insurance platform** designed specifically for gig delivery workers.
@@ -45,13 +64,13 @@ If environmental conditions stop gig workers from working, the system **automati
 
 ---
 
-#  Core System Pillars
+# Core System Pillars
 
-### 1️. Weekly Micro-Premiums
+### 1️ Weekly Micro-Premiums
 
 A subscription model aligned with the **weekly payout cycle** of gig workers.
 
-### 2️. Algorithmic Risk Scoring
+### 2️ Algorithmic Risk Scoring
 
 Premiums dynamically adjust using:
 
@@ -59,13 +78,13 @@ Premiums dynamically adjust using:
 - Historical disruption data
 - Geographic vulnerability analysis
 
-### 3️. Zero-Touch Claims
+### 3️ Zero-Touch Claims
 
 No paperwork or claim forms.
 
 The system automatically detects disruptions using **external data APIs**.
 
-### 4️. Instant Wallet Payouts
+### 4️ Instant Wallet Payouts
 
 Compensation is credited directly to the **worker’s digital wallet**.
 
@@ -94,15 +113,39 @@ A sudden monsoon flood stops deliveries in his area for **two days**, causing **
 
 ### ShieldGig Protocol
 
-1️. Weather API detects **extreme rainfall**
+1️ Weather API detects **extreme rainfall**
 
-2️. Parametric trigger validates the condition
+2️ Parametric trigger validates the condition
 
-3️. System automatically initiates payout
+3️ System automatically initiates payout
 
-4️. Rahul receives **₹800 compensation instantly**
+4️ Rahul receives **₹800 compensation instantly**
 
 No manual claim required.
+
+---
+
+# Visual System Workflow
+
+```mermaid
+flowchart LR
+
+A[Worker Registers Policy] --> B[Policy Activated]
+
+B --> C[System Monitors Environmental APIs]
+
+C --> D{Disruption Detected?}
+
+D -- No --> C
+
+D -- Yes --> E[Parametric Trigger Engine]
+
+E --> F[Eligibility Validation]
+
+F --> G[Automatic Payout]
+
+G --> H[Money Sent to Worker Wallet]
+```
 
 ---
 
@@ -141,7 +184,7 @@ External data sources:
 
 **AI Agent**
 
-We will train our own AI agent 
+We will train our own AI agent.
 
 **Trigger Engine**
 
@@ -150,6 +193,24 @@ Evaluates incoming environmental data against **parametric rules**.
 **Payment Gateway**
 
 Simulated payout system using **Razorpay Sandbox**.
+
+---
+
+# AI Decision Flow
+
+```mermaid
+flowchart TD
+
+A[Historical Weather Data] --> B[Data Cleaning]
+
+B --> C[Feature Engineering]
+
+C --> D[Machine Learning Model]
+
+D --> E[Risk Score Generation]
+
+E --> F[Dynamic Premium Pricing]
+```
 
 ---
 
@@ -189,7 +250,7 @@ Premiums dynamically adjust based on **location risk score**.
 
 ---
 
-#  AI & Logic Integration Strategy
+# AI & Logic Integration Strategy
 
 ### 1️ Risk Prediction Engine
 
@@ -228,7 +289,7 @@ The system prevents abuse by validating:
 
 ---
 
-#  Technology Stack
+# Technology Stack
 
 | Layer | Technology |
 |------|-----------|
@@ -241,7 +302,7 @@ The system prevents abuse by validating:
 
 ---
 
-#  Development Roadmap
+# Development Roadmap
 
 ### Phase 1 (Current)
 
