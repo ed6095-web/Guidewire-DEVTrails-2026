@@ -1,276 +1,161 @@
 <p align="center">
-<img src="images/banner.png" width="900">
+  <img src="images/banner.png" alt="ShieldGig Banner" width="900">
 </p>
 
 <h1 align="center">ShieldGig</h1>
 
 <p align="center">
-AI-Powered Income Protection for Gig Delivery Workers
+  <b>AI-Powered Income Protection for Gig Delivery Workers</b><br>
+  <i>Parametric Insurance Platform for India's Gig Economy</i>
 </p>
+
+---
+
+## 🚨 The Problem
+
+India’s gig economy runs on delivery partners (Swiggy, Zomato, Zepto, Blinkit). These workers earn daily wages based strictly on completed deliveries. However, uncontrollable external disruptions such as:
+* 🌧️ **Heavy Rain & Floods**
+* 🌡️ **Extreme Heatwaves**
+* 🌫️ **Severe Air Pollution**
+* 🚧 **Curfews / Sudden Shutdowns**
+
+...can completely halt deliveries. During these events, workers lose **20–30% of their weekly income**. Currently, there is **zero protection** against this environmental income loss.
+
+---
+
+## 💡 Our Solution
+
+ShieldGig is an **AI-powered parametric insurance platform** engineered specifically for gig delivery workers. 
+
+Instead of traditional, messy claim forms, ShieldGig relies on **Parametric Triggers**. Payouts are entirely data-driven and triggered automatically when predefined environmental APIs hit critical thresholds.
+
+**Key Features:**
+* **Weekly Micro-Premiums:** Subscription-based models matching the gig worker payout cycle.
+* **AI Risk Prediction:** Dynamic pricing based on location and weather forecasting.
+* **Zero-Touch Claims:** No manual filing. If it floods, the system knows, and the system pays.
+* **Instant Payout Simulation:** Direct wallet transfers for immediate financial relief.
+
+---
+
+## 🎯 Target Persona: Food Delivery Partner
+
+We are specifically targeting **Food Delivery Partners (e.g., Swiggy/Zomato)** for our initial launch.
+
+| Attribute | Worker Profile |
+| :--- | :--- |
+| **Age** | 18–35 |
+| **Daily Earnings** | ₹600 – ₹900 |
+| **Weekly Earnings** | ₹4000 – ₹6000 |
+| **Payment Cycle** | Weekly |
+
+### 📖 Real-Life Scenario
+Rahul is a delivery partner in Chennai earning ₹5,000/week. A sudden monsoon floods his delivery zone, halting work for two days. He loses ₹1,500. 
+**With ShieldGig:** Our system detects the extreme rainfall via weather APIs. The parametric trigger activates, and Rahul automatically receives an ₹800 payout directly to his wallet—no questions asked, no forms filled.
+
+---
+
+## ⚙️ System Architecture
 
 <p align="center">
-Parametric Insurance Platform for India's Gig Economy
+  <img src="images/architecture.png" alt="System Architecture" width="850">
 </p>
 
----
-
-# Problem Statement
-
-India’s gig economy depends heavily on delivery workers from platforms such as:
-
-- Swiggy
-- Zomato
-- Amazon
-- Zepto
-- Blinkit
-
-These workers earn based on completed deliveries. However, external disruptions such as:
-
-• Heavy rain  
-• Floods  
-• Extreme heat  
-• Severe pollution  
-• Curfews or sudden area shutdowns  
-
-can completely stop deliveries.
-
-When these disruptions occur, workers lose **20–30% of their weekly income** and currently there is **no protection against income loss**.
+1. **Frontend UI:** Worker Dashboard for policy management.
+2. **Backend Server:** Manages users, policies, and API polling.
+3. **AI Risk Engine:** Calculates localized risk scores.
+4. **Data Oracles:** Weather & Pollution APIs (OpenWeather, AQI).
+5. **Trigger Engine:** Validates data against parametric rules.
+6. **Payment Gateway:** Simulates automated payouts.
 
 ---
 
-# Our Solution
-
-ShieldGig is an **AI-powered parametric insurance platform** designed to protect gig delivery workers from income loss caused by environmental or social disruptions.
-
-Key Features
-
-- Weekly subscription-based insurance
-- AI-based risk prediction
-- Automatic disruption detection
-- Zero-touch claim processing
-- Instant payout simulation
-
-Unlike traditional insurance, payouts are **automatically triggered when predefined disruption conditions occur**.
-
----
-
-# Target Persona
-
-Food Delivery Partners (Swiggy / Zomato)
-
-Typical Worker Profile
-
-| Attribute | Value |
-|------|------|
-Age | 18–35 |
-Daily Earnings | ₹600–₹900 |
-Weekly Earnings | ₹4000–₹6000 |
-Work Hours | 8–10 hours |
-Payment Cycle | Weekly |
-
----
-
-# Real Life Scenario
-
-Rahul is a Swiggy delivery partner working in Chennai.
-
-Average earnings
-
-₹750 per day  
-₹5000 per week
-
-During heavy rainfall, deliveries stop for two days.
-
-Income loss:
-
-₹1500
-
-With ShieldGig:
-
-• System detects rainfall automatically  
-• Insurance trigger activates  
-• Rahul receives ₹800 payout automatically  
-
-No claim filing required.
-
----
-
-# System Architecture
+## 🔄 Automated Workflow
 
 <p align="center">
-<img src="images/architecture.png" width="850">
+  <img src="images/workflow.png" alt="System Workflow" width="850">
 </p>
 
-Architecture Components
-
-1 Worker Web App  
-2 Backend Server  
-3 AI Risk Engine  
-4 Weather & Pollution APIs  
-5 Trigger Engine  
-6 Claim Processor  
-7 Payment System
+1. Worker registers and selects a weekly plan.
+2. AI calculates a localized premium risk score.
+3. Policy activates.
+4. System continuously monitors environmental data via APIs.
+5. **Event Detected** (e.g., Rainfall > 50mm).
+6. Smart contract / Trigger engine generates an automatic claim.
+7. Instant payout initiated to the worker.
 
 ---
 
-# Workflow
+## 📊 Parametric Triggers & Payouts
+
+These triggers ensure transparent, unbiased, and instant payouts.
+
+| Event | API Condition | Payout Amount |
+| :--- | :--- | :--- |
+| 🌧 **Heavy Rain** | Rainfall > 50mm | ₹300 |
+| 🌡 **Extreme Heat** | Temperature > 45°C | ₹200 |
+| 🌊 **Flood Alert** | Verified Govt Flood Alert | ₹400 |
+| 🌫 **Severe Pollution**| AQI > 400 | ₹150 |
+| 🚧 **Curfew** | Govt Restriction Notification| ₹500 |
+
+---
+
+## 💰 Weekly Premium Model
+
+Because gig workers earn weekly, our premiums are strictly weekly. Our AI dynamically adjusts these premiums depending on the specific location's risk profile (e.g., a high-flood zone might see a slight premium increase).
+
+| Plan | Weekly Premium | Income Coverage |
+| :--- | :--- | :--- |
+| **Basic** | ₹20/week | Up to ₹1000 |
+| **Standard**| ₹35/week | Up to ₹2000 |
+| **Pro** | ₹50/week | Up to ₹3500 |
+
+---
+
+## 🤖 AI Integration Strategy
+
+**1. Risk Prediction Engine**
+Machine learning models (built with Python & Scikit-learn) analyze historical weather data, flood zones, and traffic patterns to generate a dynamic risk score for specific delivery zones.
+
+**2. Dynamic Pricing**
+Premiums automatically adjust based on the AI's risk score, ensuring fair pricing (e.g., a dry week in a safe zone lowers the premium).
+
+**3. Fraud Detection Engine**
+AI-based anomaly detection prevents abuse by cross-referencing:
+* Worker GPS spoofing checks.
+* Discrepancies between claimed weather and actual API data.
+* Delivery platform activity validation.
+
+---
+
+## 💻 Technology Stack
+
+* **Frontend:** React.js / Next.js
+* **Backend:** Node.js + Express
+* **Database:** MongoDB
+* **AI/ML:** Python, TensorFlow/Scikit-learn
+* **APIs:** OpenWeather API, AQI API
+* **Payments:** Razorpay Sandbox
+
+---
+
+## 📱 Platform Preview
 
 <p align="center">
-<img src="images/workflow.png" width="850">
+  <img src="images/dashboard.png" alt="Dashboard Preview" width="700">
 </p>
 
-Process
+---
 
-1 Worker registers on platform  
-2 Worker selects weekly insurance plan  
-3 AI calculates premium based on risk  
-4 Worker activates policy  
-5 System monitors disruption triggers  
-6 Event detected via API  
-7 Automatic claim generated  
-8 Instant payout initiated  
+## 🚀 Development Roadmap
+
+* **Phase 1 (Current):** Strategy, Idea Validation, Architecture Design, and Parametric Modeling.
+* **Phase 2:** Core system development (Auth, Policy Creation, API Polling, Trigger Engine).
+* **Phase 3:** Scale platform (Advanced AI Fraud Detection, Real-time Payout Simulation, Analytics Dashboard).
 
 ---
 
-# Parametric Triggers
+## 👥 Team
 
-| Event | Condition | Payout |
-|------|------|------|
-Heavy Rain | Rainfall > 50mm | ₹300 |
-Extreme Heat | Temperature > 45°C | ₹200 |
-Flood Alert | Government flood alert | ₹400 |
-Severe Pollution | AQI > 400 | ₹150 |
-Curfew | Government restriction | ₹500 |
-
-These triggers ensure **transparent and automated payouts without manual claims**.
-
----
-
-# Weekly Premium Model
-
-Gig workers operate on a weekly earning cycle, therefore ShieldGig uses a **weekly subscription model**.
-
-| Plan | Weekly Premium | Coverage |
-|------|------|------|
-Basic | ₹20/week | Up to ₹1000 |
-Standard | ₹35/week | Up to ₹2000 |
-Pro | ₹50/week | Up to ₹3500 |
-
-AI dynamically adjusts premiums depending on location risk.
-
-Example
-
-Low flood zone → ₹20/week  
-High flood zone → ₹28/week
-
----
-
-# AI Integration
-
-## Risk Prediction
-
-Machine learning models analyze:
-
-• Weather history  
-• Flood data  
-• Pollution data  
-• Traffic disruption patterns  
-
-This generates a **risk score for each delivery zone**.
-
----
-
-## Dynamic Premium Adjustment
-
-Premiums automatically adjust based on calculated risk score.
-
-Higher risk zone → slightly higher premium  
-Lower risk zone → cheaper insurance
-
----
-
-## Fraud Detection
-
-AI-based anomaly detection prevents fraudulent claims.
-
-Fraud checks include:
-
-• Location validation  
-• Weather verification  
-• Duplicate claim detection  
-• Delivery activity validation
-
----
-
-# Technology Stack
-
-Frontend  
-React.js
-
-Backend  
-Node.js + Express
-
-Database  
-MongoDB
-
-AI / ML  
-Python  
-Scikit-learn
-
-APIs  
-OpenWeather API  
-AQI API
-
-Payment Simulation  
-Razorpay Sandbox
-
----
-
-# Platform Choice
-
-The platform is initially developed as a **web application** because:
-
-• Faster development  
-• Easy API integration  
-• Accessible on low-end smartphones  
-• Simple onboarding
-
-Future versions will include a **mobile application**.
-
----
-
-# Development Roadmap
-
-Phase 1  
-Research, architecture design, and idea validation
-
-Phase 2  
-Core system development
-
-- Worker registration
-- Policy creation
-- Premium calculation
-- Automated claim triggering
-
-Phase 3  
-System scaling
-
-- Fraud detection
-- Instant payout simulation
-- Analytics dashboard
-
----
-
-# Expected Impact
-
-ShieldGig helps gig workers:
-
-• Protect weekly earnings  
-• Reduce financial uncertainty  
-• Receive instant payouts during disruptions  
-
-This creates a **financial safety net for India’s growing gig economy**.
-
----
-
-# Repository Structure
+* **Eashan Darsh** - AI/ML & Full Stack Development
+* *(Add Teammate 2 Name)* - *(Add Role)*
+* *(Add Teammate 3 Name)* - *(Add Role)*
