@@ -51,7 +51,6 @@ Rahul is a delivery partner earning ₹5,000/week. A sudden monsoon floods his d
 
 ## ⚙️ System Architecture Concept
 
-*(Note: Add a clean, system-architecture style diagram here detailing the data flow)*
 <p align="center">
   <img src="images/architecture.png" alt="System Architecture Placeholder" width="850">
 </p>
@@ -127,6 +126,8 @@ To prevent system abuse, the logic will cross-reference:
 
 ## 👥 Team
 
-* **Eashan Darsh** - System Architecture & AI/ML
-* *(Add Teammate 2 Name)* - *(Add Role)*
-* *(Add Teammate 3 Name)* - *(Add Role)*
+* **Eashan Darsh** - System Architecture & Frontend
+* *(Ved Deshmukh)* - *(Resarch)*
+* *(Shashwat Chaturvedi)* - *(Backend)*
+* *(Sneha Basera)* - *(Data Collection)*
+* *(Asim Shankar)* - *(AI/ML)*
