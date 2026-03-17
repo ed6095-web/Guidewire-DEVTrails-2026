@@ -9,7 +9,7 @@
 
 ---
 
-## 🚨 Core Problem
+## <font color="#8b949e">**Core Problem**</font>
 
 India’s gig economy relies on delivery partners who earn daily wages strictly based on completed deliveries. However, uncontrollable external disruptions such as **heavy rain, extreme heatwaves, severe air pollution, or government curfews** can completely halt operations. 
 
@@ -17,7 +17,7 @@ During these events, workers lose **20–30% of their weekly income**. Currently
 
 ---
 
-## 💡 Proposed Concept: ShieldGig
+## <font color="#8b949e">**Proposed Concept: ShieldGig**</font>
 
 ShieldGig is a proposed **parametric insurance system** engineered specifically for gig delivery workers. 
 
@@ -31,7 +31,7 @@ Instead of traditional, manual claim processing, ShieldGig relies on automated p
 
 ---
 
-## 🎯 Target User Persona
+## <font color="#8b949e">**Target User Persona**</font>
 
 For Phase 1, the system logic is optimized for **Food Delivery Partners**.
 
@@ -42,14 +42,14 @@ For Phase 1, the system logic is optimized for **Food Delivery Partners**.
 | **Daily Earnings** | ₹600 – ₹900 |
 | **Payment Cycle** | Weekly |
 
-### 📖 Workflow Scenario
+### <font color="#8b949e">**Workflow Scenario**</font>
 Rahul is a delivery partner earning ₹5,000/week. A sudden monsoon floods his delivery zone, halting work for two days, resulting in a ₹1,500 income loss. 
 
 **The ShieldGig Protocol:** The system backend detects the extreme rainfall via integrated weather APIs. The parametric smart-trigger evaluates the data, validates the condition, and automatically initiates an ₹800 payout to Rahul's wallet. 
 
 ---
 
-## ⚙️ System Architecture Concept
+## <font color="#8b949e">**System Architecture Concept**</font>
 
 <p align="center">
   <img src="images/architecture.png" alt="System Architecture Placeholder" width="850">
@@ -64,7 +64,7 @@ Rahul is a delivery partner earning ₹5,000/week. A sudden monsoon floods his d
 
 ---
 
-## 📊 Parametric Triggers & Payout Logic
+## <font color="#8b949e">**Parametric Triggers & Payout Logic**</font>
 
 These thresholds ensure transparent, unbiased, and instantaneous system responses.
 
@@ -78,7 +78,7 @@ These thresholds ensure transparent, unbiased, and instantaneous system response
 
 ---
 
-## 💰 Weekly Premium Model
+## <font color="#8b949e">**Weekly Premium Model**</font>
 
 Premiums are calculated weekly to match the user's financial cycle. The backend dynamically adjusts these rates depending on the specific location's risk profile.
 
@@ -90,7 +90,7 @@ Premiums are calculated weekly to match the user's financial cycle. The backend 
 
 ---
 
-## 🤖 AI & Logic Integration Strategy
+## <font color="#8b949e">**AI & Logic Integration Strategy**</font>
 
 **1. Risk Prediction Engine**
 We plan to utilize machine learning models (Python, Scikit-learn) to analyze historical weather patterns and geographic flood zones. This generates a dynamic risk score for specific delivery grids.
@@ -105,7 +105,7 @@ To prevent system abuse, the logic will cross-reference:
 
 ---
 
-## 💻 Proposed Technology Stack
+## <font color="#8b949e">**Proposed Technology Stack**</font>
 
 * **Frontend:** React.js / Next.js
 * **Backend:** Node.js + Express
@@ -116,7 +116,7 @@ To prevent system abuse, the logic will cross-reference:
 
 ---
 
-## 🚀 Development Roadmap
+## <font color="#8b949e">**Development Roadmap**</font>
 
 * **Phase 1 (Current):** Concept definition, architectural planning, and parametric trigger modeling.
 * **Phase 2:** Core API integration, backend logic development, and risk engine training.
@@ -124,7 +124,7 @@ To prevent system abuse, the logic will cross-reference:
 
 ---
 
-## 👥 Team
+## <font color="#8b949e">**Team**</font>
 
 * **Eashan Darsh** - System Architecture & Frontend
 * **Ved Deshmukh** - Research
