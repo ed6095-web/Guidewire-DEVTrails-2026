@@ -242,9 +242,9 @@ Premiums are calculated weekly to match the worker’s payment cycle.
 
 | Tier | Weekly Premium | Maximum Coverage |
 |----|----|----|
-| Basic | ₹20 | Up to ₹1000 |
-| Standard | ₹35 | Up to ₹2000 |
-| Pro | ₹50 | Up to ₹3500 |
+| Basic | ₹20 | Up to ₹300 |
+| Standard | ₹35 | Up to ₹500 |
+| Pro | ₹50 | Up to ₹800 |
 
 Premiums dynamically adjust based on **location risk score**.
 
