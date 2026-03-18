@@ -95,7 +95,7 @@ Compensation is credited directly to the *worker’s digital wallet*.
 Phase 1 focuses on *Food Delivery Partners*.
 
 <p align="center">
-  <img src="persona.jpeg" width="800">
+  <img src="persona.png" width="800">
 </p>
 
 ---
