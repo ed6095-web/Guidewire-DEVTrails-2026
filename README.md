@@ -226,27 +226,36 @@ xychart-beta
     bar [300,200,400,150,500]
 ```
 
+## Parametric Triggers & Payout Logic
+
 | Disruption Event | API Condition | Automated Payout |
 |---|---|---|
-| 🌧 Heavy Rain | Rainfall > 50mm | ₹300 |
-| 🌡 Extreme Heat | Temperature > 45°C | ₹200 |
-| 🌊 Flood Alert | Government Flood Alert | ₹400 |
-| 🌫 Severe Pollution | AQI > 400 | ₹150 |
-| 🚧 Curfew | Geo-fenced restriction | ₹500 |
+| 🌧 Light Rain | Rainfall 20–50 mm | ₹100 |
+| 🌧 Moderate Rain | Rainfall 50–100 mm | ₹200 |
+| 🌧 Heavy Rain | Rainfall > 100 mm | ₹300 |
+| 🌡 Extreme Heat | Temperature > 45°C | ₹150–₹250 |
+| 🌊 Flood Alert | Government Flood Alert | ₹300–₹400 |
+| 🌫 Severe Pollution | AQI > 400 | ₹100–₹150 |
+| 🚧 Curfew | Geo-fenced restriction | ₹300–₹500 |
 
----
+> Note:
+> - Payouts vary based on user tier (Basic, Standard, Pro)
+> - All payouts are subject to per-event and weekly caps
+> - Values are dynamically adjusted using risk scoring
 
 # Weekly Premium Model
 
 Premiums are calculated weekly to match the worker’s payment cycle.
 
-| Tier | Weekly Premium | Maximum Coverage |
-|----|----|----|
-| Basic | ₹20 | Up to ₹300 |
-| Standard | ₹35 | Up to ₹500 |
-| Pro | ₹50 | Up to ₹800 |
+| Tier     | Weekly Premium | Max Weekly Coverage | Per Event Cap | Best For |
+|----------|---------------|---------------------|---------------|----------|
+| Basic    | ₹25           | Up to ₹500          | ₹150–₹200     | Low-risk areas |
+| Standard | ₹40           | Up to ₹1000         | ₹250–₹300     | Moderate-risk users |
+| Pro      | ₹60           | Up to ₹1800         | Up to ₹400    | High-risk zones |
 
-Premiums dynamically adjust based on **location risk score**.
+Premiums dynamically adjust based on **location risk score, weather forecasts, and historical disruption data**.
+
+> Note: Payouts are capped per event and per week to ensure sustainability and fairness.
 
 ---
 
