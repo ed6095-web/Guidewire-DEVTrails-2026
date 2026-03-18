@@ -21,7 +21,7 @@ However, workers face income loss due to *uncontrollable environmental disruptio
 - 🚧 Government Curfews  
 - 🌊 Flood Alerts  
 
-During such events, workers may lose *20–30% of their weekly income, and currently there is **no dedicated protection system* for this type of disruption.
+During such events, workers may lose **20–30% of their weekly income**, and currently there is **no dedicated protection system** for this type of disruption. for this type of disruption.
 
 mermaid
 pie title Weekly Income Loss Due to Environmental Disruptions
@@ -95,7 +95,7 @@ Compensation is credited directly to the *worker’s digital wallet*.
 Phase 1 focuses on *Food Delivery Partners*.
 
 <p align="center">
-  <img src="persona.png" width="800">
+  <img src="images/persona.png" width="800">
 </p>
 
 ---
