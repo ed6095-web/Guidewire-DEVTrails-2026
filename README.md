@@ -21,21 +21,21 @@ However, workers face income loss due to *uncontrollable environmental disruptio
 - 🚧 Government Curfews  
 - 🌊 Flood Alerts  
 
-During such events, workers may lose **20–30% of their weekly income**, and currently there is **no dedicated protection system** for this type of disruption. for this type of disruption.
+During such events, workers may lose **20–30% of their weekly income**, and currently there is **no dedicated protection system** for this type of disruption.
 
-mermaid
+```mermaid
 pie title Weekly Income Loss Due to Environmental Disruptions
     "Retained Earnings" : 70
     "Income Lost to Weather/Disruptions" : 30
-
+```
 
 ---
 
 # Why This Matters
 
-India currently has *7+ million gig workers, and the number is growing rapidly with platforms like **Swiggy, Zomato, Blinkit, and Zepto*.
+India currently has *7+ million gig workers*, and the number is growing rapidly with platforms like **Swiggy, Zomato, Blinkit, and Zepto**.
 
-Most of these workers depend on *daily earnings to survive, meaning even **1–2 days of disruption* can significantly affect their financial stability.
+Most of these workers depend on *daily earnings to survive*, meaning even **1–2 days of disruption** can significantly affect their financial stability.
 
 Environmental disruptions such as:
 
@@ -66,11 +66,11 @@ If environmental conditions stop gig workers from working, the system *automatic
 
 # Core System Pillars
 
-### 1️ Weekly Micro-Premiums
+### 1️⃣ Weekly Micro-Premiums
 
 A subscription model aligned with the *weekly payout cycle* of gig workers.
 
-### 2️ Algorithmic Risk Scoring
+### 2️⃣ Algorithmic Risk Scoring
 
 Premiums dynamically adjust using:
 
@@ -78,13 +78,13 @@ Premiums dynamically adjust using:
 - Historical disruption data
 - Geographic vulnerability analysis
 
-### 3️ Zero-Touch Claims
+### 3️⃣ Zero-Touch Claims
 
 No paperwork or claim forms.
 
 The system automatically detects disruptions using *external data APIs*.
 
-### 4️ Instant Wallet Payouts
+### 4️⃣ Instant Wallet Payouts
 
 Compensation is credited directly to the *worker’s digital wallet*.
 
@@ -106,17 +106,14 @@ Phase 1 focuses on *Food Delivery Partners*.
 
 Rahul is a delivery partner earning *₹5000 per week*.
 
-A sudden monsoon flood stops deliveries in his area for *two days, causing *₹1500 income loss**.
+A sudden monsoon flood stops deliveries in his area for *two days*, causing **₹1500 income loss**.
 
 ### ShieldGig Protocol
 
-1️ Weather API detects *extreme rainfall*
-
-2️ Parametric trigger validates the condition
-
-3️ System automatically initiates payout
-
-4️ Rahul receives *₹800 compensation instantly*
+1️⃣ Weather API detects *extreme rainfall*  
+2️⃣ Parametric trigger validates the condition  
+3️⃣ System automatically initiates payout  
+4️⃣ Rahul receives *₹800 compensation instantly*  
 
 No manual claim required.
 
@@ -124,25 +121,17 @@ No manual claim required.
 
 # Visual System Workflow
 
-mermaid
+```mermaid
 flowchart LR
-
 A[Worker Registers Policy] --> B[Policy Activated]
-
 B --> C[System Monitors Environmental APIs]
-
 C --> D{Disruption Detected?}
-
 D -- No --> C
-
 D -- Yes --> E[Parametric Trigger Engine]
-
 E --> F[Eligibility Validation]
-
 F --> G[Automatic Payout]
-
 G --> H[Money Sent to Worker Wallet]
-
+```
 
 ---
 
@@ -177,7 +166,7 @@ External data sources:
 
 - OpenWeather API  
 - Government AQI APIs  
-- Disaster alert systems
+- Disaster alert systems  
 
 *AI Agent*
 
@@ -195,19 +184,14 @@ Simulated payout system using *Razorpay Sandbox*.
 
 # AI Decision Flow
 
-mermaid
+```mermaid
 flowchart TD
-
 A[Historical Weather Data] --> B[Data Cleaning]
-
 B --> C[Feature Engineering]
-
 C --> D[Machine Learning Model]
-
 D --> E[Risk Score Generation]
-
 E --> F[Dynamic Premium Pricing]
-
+```
 
 ---
 
@@ -215,13 +199,13 @@ E --> F[Dynamic Premium Pricing]
 
 These thresholds enable *automated and transparent payouts*.
 
-mermaid
+```mermaid
 xychart-beta
     title "Parametric Payout Matrix (₹)"
     x-axis ["Rain (20–50mm)","Rain (50–100mm)","Rain (>100mm)","Heat >45°C","Flood Alert","AQI >400","Curfew"]
     y-axis "Payout Amount (₹)" 0 --> 600
     bar [100,200,300,200,350,120,400]
-
+```
 
 ## Parametric Triggers & Payout Logic
 
@@ -240,9 +224,9 @@ xychart-beta
 > - All payouts are subject to per-event and weekly caps
 > - Values are dynamically adjusted using risk scoring
 
-# Weekly Premium Model
+---
 
-Premiums are calculated weekly to match the worker’s payment cycle.
+# Weekly Premium Model
 
 | Tier     | Weekly Premium | Max Weekly Coverage | Per Event Cap | Best For |
 |----------|---------------|---------------------|---------------|----------|
@@ -252,46 +236,33 @@ Premiums are calculated weekly to match the worker’s payment cycle.
 
 Premiums dynamically adjust based on *location risk score, weather forecasts, and historical disruption data*.
 
-> Note: Payouts are capped per event and per week to ensure sustainability and fairness.
-
 ---
 
 # AI & Logic Integration Strategy
 
-### 1️ Risk Prediction Engine
-
-Machine learning models analyze:
+### 1️⃣ Risk Prediction Engine
 
 - Historical weather patterns  
 - Flood-prone regions  
 - Seasonal disruptions  
 
-Technologies:
-
-- Python  
-- Scikit-learn  
+**Tech:** Python, Scikit-learn  
 
 ---
 
-### 2️ Dynamic Pricing Logic
+### 2️⃣ Dynamic Pricing Logic
 
-Premiums automatically scale according to:
-
-- Geographic risk
-- Weather probability
-- Disaster likelihood
-
-Lower risk areas → cheaper premiums.
+- Geographic risk  
+- Weather probability  
+- Disaster likelihood  
 
 ---
 
-### 3️ Fraud Detection
+### 3️⃣ Fraud Detection
 
-The system prevents abuse by validating:
-
-- GPS location vs disruption zones  
-- User reports vs API data  
-- Duplicate payout patterns  
+- GPS validation  
+- API cross-check  
+- Duplicate detection  
 
 ---
 
@@ -310,28 +281,19 @@ The system prevents abuse by validating:
 
 # Development Roadmap
 
-### Phase 1 (Current)
-
+### Phase 1
 - Concept design  
 - Architecture planning  
-- Parametric trigger modeling  
-- Hackathon submission  
-
----
+- Parametric modeling  
 
 ### Phase 2
-
-- Backend development  
-- API integration  
-- Risk engine training  
-
----
+- Backend + APIs  
+- Risk engine  
 
 ### Phase 3
-
-- Real-time payout automation  
-- Fraud detection system  
-- Full prototype deployment  
+- Automation  
+- Fraud detection  
+- Deployment  
 
 ---
 
@@ -350,7 +312,5 @@ The system prevents abuse by validating:
 # Vision
 
 ShieldGig aims to become the *first automated income protection system for gig workers*.
-
-As gig economies grow, millions remain financially vulnerable to *environmental disruptions*.
 
 ShieldGig converts insurance into a *real-time, data-driven financial safety net*.
