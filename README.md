@@ -220,10 +220,10 @@ These thresholds enable **automated and transparent payouts**.
 
 ```mermaid
 xychart-beta
-    title "Automated Payout Matrix (₹)"
-    x-axis ["Rain >50mm","Heat >45°C","Flood Alert","AQI >400","Curfew"]
+    title "Parametric Payout Matrix (₹)"
+    x-axis ["Rain (20–50mm)","Rain (50–100mm)","Rain (>100mm)","Heat >45°C","Flood Alert","AQI >400","Curfew"]
     y-axis "Payout Amount (₹)" 0 --> 600
-    bar [300,200,400,150,500]
+    bar [100,200,300,200,350,120,400]
 ```
 
 ## Parametric Triggers & Payout Logic
