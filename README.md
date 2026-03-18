@@ -66,11 +66,11 @@ If environmental conditions stop gig workers from working, the system *automatic
 
 # Core System Pillars
 
-### 1️⃣ Weekly Micro-Premiums
+### 1️. Weekly Micro-Premiums
 
 A subscription model aligned with the *weekly payout cycle* of gig workers.
 
-### 2️⃣ Algorithmic Risk Scoring
+### 2️. Algorithmic Risk Scoring
 
 Premiums dynamically adjust using:
 
@@ -78,13 +78,13 @@ Premiums dynamically adjust using:
 - Historical disruption data
 - Geographic vulnerability analysis
 
-### 3️⃣ Zero-Touch Claims
+### 3️. Zero-Touch Claims
 
 No paperwork or claim forms.
 
 The system automatically detects disruptions using *external data APIs*.
 
-### 4️⃣ Instant Wallet Payouts
+### 4️. Instant Wallet Payouts
 
 Compensation is credited directly to the *worker’s digital wallet*.
 
@@ -110,10 +110,10 @@ A sudden monsoon flood stops deliveries in his area for *two days*, causing **�
 
 ### ShieldGig Protocol
 
-1️⃣ Weather API detects *extreme rainfall*  
-2️⃣ Parametric trigger validates the condition  
-3️⃣ System automatically initiates payout  
-4️⃣ Rahul receives *₹800 compensation instantly*  
+1️. Weather API detects *extreme rainfall*  
+2️. Parametric trigger validates the condition  
+3️. System automatically initiates payout  
+4️. Rahul receives *₹800 compensation instantly*  
 
 No manual claim required.
 
@@ -240,7 +240,7 @@ Premiums dynamically adjust based on *location risk score, weather forecasts, an
 
 # AI & Logic Integration Strategy
 
-### 1️⃣ Risk Prediction Engine
+### 1️. Risk Prediction Engine
 
 - Historical weather patterns  
 - Flood-prone regions  
@@ -250,7 +250,7 @@ Premiums dynamically adjust based on *location risk score, weather forecasts, an
 
 ---
 
-### 2️⃣ Dynamic Pricing Logic
+### 2️. Dynamic Pricing Logic
 
 - Geographic risk  
 - Weather probability  
@@ -258,7 +258,7 @@ Premiums dynamically adjust based on *location risk score, weather forecasts, an
 
 ---
 
-### 3️⃣ Fraud Detection
+### 3️. Fraud Detection
 
 - GPS validation  
 - API cross-check  
