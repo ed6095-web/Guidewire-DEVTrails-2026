@@ -208,11 +208,8 @@ It validates **behavioral consistency across multiple independent signals**.
 ## Fraud Detection Model
 
 ```text
-Fraud Score =
-(Motion × 0.3) +
-(Network × 0.2) +
-(Location × 0.3) +
-(Cluster × 0.2)
+Fraud Score = (Motion × 0.3) + (Network × 0.2) + (Location × 0.3) + (Cluster × 0.2)
+
 ```
 
 ---
@@ -221,21 +218,30 @@ Fraud Score =
 
 ```mermaid
 flowchart TD
+A[User Input] --> B[GPS Data]
+A --> C[Motion Data]
+A --> D[Network Data]
+A --> E[Traffic Data]
+A --> F[Platform Data]
 
-A[User Data] --> B[Multi-Signal Validation]
+B --> G[Validation Engine]
+C --> G
+D --> G
+E --> G
+F --> G
 
-B --> C{Consistent?}
+G --> H{Consistent Behavior?}
 
-C -- No --> D[Flag Suspicious]
-C -- Yes --> E[Proceed to Fraud Scoring]
+H -- Yes --> I[Approve]
+H -- No --> J[Flag Suspicious]
 
-D --> F[Fraud Score]
-E --> F
+J --> K[Fraud Scoring]
 
-F --> G{Fraud High?}
+K --> L{Fraud Threshold?}
 
-G -- Yes --> H[Block/Delay]
-G -- No --> I[Send to Risk Engine]
+L -- Yes --> M[Delay / Block]
+L -- No --> I
+
 ```
 
 ---
