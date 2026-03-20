@@ -123,10 +123,8 @@ G --> H[Wallet Credit]
 # Decision Engine (Core Innovation)
 
 ```text
-Risk Score =
-(Environment × 0.4) +
-(Platform × 0.4) +
-(Mobility × 0.2)
+Risk Score = (Environment × 0.4) + (Platform × 0.4) + (Mobility × 0.2)
+
 ```
 
 Weights reflect real-world impact on income and are dynamically adjustable.
