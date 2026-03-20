@@ -167,7 +167,13 @@ L --> M{Threshold?}
 M -- Yes --> N[Payout]
 M -- No --> I
 ```
-
+```mermaid
+xychart-beta
+    title "Trigger-wise Payout Distribution (₹)"
+    x-axis ["Rain","Heat","Pollution","Platform","Mobility"]
+    y-axis "Payout (₹)" 0 --> 400
+    bar [250,200,150,350,300]
+```
 ## Trigger Table
 
 | Category | Trigger | Condition | Payout |
