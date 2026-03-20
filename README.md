@@ -124,6 +124,10 @@ G --> H[Wallet Credit]
 
 # Decision Engine (Core Innovation)
 
+<p align="center">
+  <img src="images/decision.png" width="750">
+</p>
+
 ```text
 Risk Score = (Environment × 0.4) + (Platform × 0.4) + (Mobility × 0.2)
 ```
