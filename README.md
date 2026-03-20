@@ -13,14 +13,13 @@
 
 India’s gig economy relies on *delivery partners* who earn daily wages strictly based on completed deliveries.
 
-However, workers face income loss due to *uncontrollable environmental and operational disruptions* such as:
+However, workers face income loss due to *uncontrollable external disruptions* such as:
 
 - Heavy Rain  
 - Extreme Heatwaves  
 - Severe Air Pollution  
-- Mobility restrictions (road blockages, restricted zones)  
-- Sudden drop in order demand  
-- Platform downtime  
+- Mobility Restrictions (road blockages, restricted zones)  
+- Platform-Level Disruptions  
 
 During such events, workers may lose **20–30% of their weekly income**, and currently there is **no dedicated protection system** for this type of disruption.
 
@@ -41,13 +40,12 @@ Most of these workers depend on *daily earnings to survive*, meaning even **1–
 Disruptions such as:
 
 - Environmental conditions  
-- Demand fluctuations  
-- Platform outages  
+- Platform-level anomalies  
 - Mobility restrictions  
 
 can *instantly halt deliveries*, leaving workers without income.
 
-ShieldGig aims to create a *financial safety net* that protects gig workers from these unpredictable events through *automated parametric insurance*.
+ShieldGig creates a *financial safety net* using automated parametric insurance.
 
 ---
 
@@ -55,39 +53,31 @@ ShieldGig aims to create a *financial safety net* that protects gig workers from
 
 *ShieldGig* is a *parametric micro-insurance platform* designed specifically for gig delivery workers.
 
-Instead of traditional manual claim processes, the system uses *automated data-driven triggers* powered by APIs.
-
-When certain conditions are met, *payouts are automatically triggered*.
+Instead of manual claims, the system uses *real-time external data signals* to detect disruptions and trigger payouts automatically.
 
 ### Core Idea
 
-If real-world conditions reduce earning opportunities, the system *automatically compensates a portion of lost income.*
+If real-world disruptions reduce earning capacity, the system *automatically compensates income loss.*
 
 ---
 
 # Core System Pillars
 
-### 1️. Weekly Micro-Premiums
+### 1. Weekly Micro-Premiums
+Aligned with the *weekly payout cycle* of gig workers.
 
-A subscription model aligned with the *weekly payout cycle* of gig workers.
-
-### 2️. Algorithmic Risk Scoring
-
+### 2. Algorithmic Risk Scoring
 Premiums dynamically adjust using:
 
 - Weather forecasts  
-- Demand trends  
+- Platform activity signals  
 - Mobility conditions  
 
-### 3️. Zero-Touch Claims
+### 3. Zero-Touch Claims
+No paperwork. Fully automated detection and payout.
 
-No paperwork or claim forms.
-
-The system automatically detects disruptions using *external data APIs*.
-
-### 4️. Instant Wallet Payouts
-
-Compensation is credited directly to the *worker’s digital wallet*.
+### 4. Instant Wallet Payouts
+Direct compensation to worker wallets.
 
 ---
 
@@ -107,16 +97,16 @@ Phase 1 focuses on *Food Delivery Partners*.
 
 Rahul is a delivery partner earning *₹5000 per week*.
 
-A sudden disruption reduces available delivery orders for two days, causing **₹1500 income loss**.
+A disruption reduces his working ability for two days, causing **₹1500 income loss**.
 
 ### ShieldGig Protocol
 
-1. System detects abnormal drop in activity or external disruption  
-2. Parametric condition is validated  
-3. System automatically initiates payout  
-4. Rahul receives *₹800 compensation instantly*  
+1. System detects external disruption via APIs  
+2. Trigger conditions are validated  
+3. Risk engine evaluates impact  
+4. Automatic payout is initiated  
 
-No manual claim required.
+Rahul receives *₹800 instantly* with zero manual claim.
 
 ---
 
@@ -125,11 +115,11 @@ No manual claim required.
 ```mermaid
 flowchart LR
 A[Worker Registers Policy] --> B[Policy Activated]
-B --> C[System Monitors APIs]
+B --> C[System Monitors External APIs]
 C --> D{Disruption Detected?}
 D -- No --> C
 D -- Yes --> E[Trigger Engine]
-E --> F[Eligibility Validation]
+E --> F[Risk Evaluation]
 F --> G[Automatic Payout]
 G --> H[Money Sent to Wallet]
 ```
@@ -145,40 +135,54 @@ G --> H[Money Sent to Wallet]
 ### Architecture Components
 
 *Client Interface*
-
 - Worker dashboard  
-- Policy registration  
-- Coverage tracking  
+- Policy tracking  
 
 *Backend Node*
-
-- Policy management  
 - API polling  
 - Event monitoring  
 
 *Risk Engine*
-
-- Calculates composite risk scores  
-- Determines dynamic premium pricing  
+- Composite risk scoring  
+- Dynamic pricing  
 
 *Data Oracles*
-
 - Weather APIs  
-- Demand signals  
 - Traffic / mobility data  
-- Platform status  
+- Platform status signals  
 
 *AI Agent*
-
-Generates dynamic risk predictions.
+- Learns historical patterns between disruptions and income loss  
+- Adjusts risk weights dynamically  
 
 *Trigger Engine*
-
-Evaluates real-time data against defined rules.
+- Validates parametric conditions  
 
 *Payment Gateway*
+- Simulated payout system  
 
-Simulated payout system.
+---
+
+# Decision Engine (Core Innovation)
+
+Unlike traditional rule-based systems, ShieldGig uses a **multi-factor decision model**.
+
+```text
+Risk Score =
+(Environment Factor × 0.4) +
+(Platform Impact × 0.4) +
+(Mobility Factor × 0.2)
+```
+
+### Payout Logic
+
+```text
+Risk > 70 → High Payout  
+40–70 → Partial Payout  
+< 40 → No Payout  
+```
+
+This ensures payouts are based on **actual earning impact**, not just raw events.
 
 ---
 
@@ -187,8 +191,8 @@ Simulated payout system.
 ```mermaid
 flowchart TD
 A[Weather Data] --> B[Processing]
-C[Order Data] --> B
-D[Traffic Data] --> B
+C[Platform Data] --> B
+D[Mobility Data] --> B
 B --> E[Feature Engineering]
 E --> F[ML Model]
 F --> G[Risk Score]
@@ -201,72 +205,51 @@ G --> H[Dynamic Pricing]
 
 ```mermaid
 xychart-beta
-    title "Hybrid Trigger Payout Matrix (₹)"
-    x-axis ["Rain","Heat","Pollution","Order Drop","Inactivity","Outage","Traffic","Restriction"]
+    title "Core Trigger Payout Matrix (₹)"
+    x-axis ["Rain","Heat","Pollution","Outage","Mobility"]
     y-axis "Payout Amount (₹)" 0 --> 600
-    bar [250,200,150,300,250,350,200,300]
+    bar [250,200,150,350,300]
 ```
 
-## Parametric Triggers & Payout Logic
+## Trigger Table
 
 | Category | Trigger | Condition | Payout |
 |----------|--------|----------|--------|
 | Environmental | Heavy Rain | Rainfall > 60mm | ₹250 |
 | Environmental | Extreme Heat | Temperature > 45°C | ₹200 |
 | Environmental | Pollution | AQI > 400 | ₹150 |
-| Demand | Order Drop | Orders drop > 40% in zone | ₹300 |
-| Demand | Zone Inactivity | No orders for 2+ hours | ₹250 |
-| Platform | Outage | Platform downtime detected | ₹350 |
-| Mobility | Traffic Lockdown | Congestion exceeds threshold | ₹200 |
-| Access | Route Restriction | Area inaccessible due to blockage | ₹300 |
-
----
-
-### Dynamic Risk Score
-
-```
-Risk Score = (Weather Factor × 0.4) + (Demand Factor × 0.4) + (Mobility Factor × 0.2)
-```
+| Platform | Platform Disruption | Abnormal drop in activity / downtime | ₹350 |
+| Mobility | Mobility Restriction | Route blockage / restricted zone | ₹300 |
 
 ---
 
 # Weekly Premium Model
 
-| Tier     | Weekly Premium | Max Weekly Coverage | Per Event Cap | Best For |
-|----------|---------------|---------------------|---------------|----------|
-| Basic    | ₹25           | Up to ₹500          | ₹150–₹200     | Low-risk areas |
-| Standard | ₹40           | Up to ₹1000         | ₹250–₹300     | Moderate-risk users |
-| Pro      | ₹60           | Up to ₹1800         | Up to ₹400    | High-risk zones |
+| Tier     | Weekly Premium | Max Coverage | Per Event Cap |
+|----------|---------------|-------------|---------------|
+| Basic    | ₹25           | ₹500        | ₹150–₹200     |
+| Standard | ₹40           | ₹1000       | ₹250–₹300     |
+| Pro      | ₹60           | ₹1800       | Up to ₹400    |
 
-Premiums dynamically adjust based on *risk score and real-time conditions*.
+Premiums dynamically adjust based on **risk score and location conditions**.
 
 ---
 
-# AI & Logic Integration Strategy
+# AI & Logic Integration
 
-### 1️. Risk Prediction Engine
-
+### Risk Prediction
 - Weather patterns  
-- Demand fluctuations  
-- Traffic conditions  
+- Platform disruptions  
+- Mobility data  
 
-**Tech:** Python, Scikit-learn  
+### Dynamic Pricing
+- Risk score driven  
+- Area-based adjustments  
 
----
-
-### 2️. Dynamic Pricing Logic
-
-- Risk score  
-- Area conditions  
-- Historical patterns  
-
----
-
-### 3️. Fraud Detection
-
+### Fraud Detection
 - Location validation  
-- Data cross-verification  
-- Pattern detection  
+- API cross-verification  
+- Anomaly detection  
 
 ---
 
@@ -279,19 +262,18 @@ Premiums dynamically adjust based on *risk score and real-time conditions*.
 | Database | MongoDB |
 | AI / ML | Python, Scikit-learn |
 | APIs | Weather, Traffic, Platform APIs |
-| Payment Simulation | Razorpay Sandbox |
+| Payments | Razorpay Sandbox |
 
 ---
 
 # Development Roadmap
 
 ### Phase 1
-- Concept design  
-- Architecture planning  
-- Parametric modeling  
+- Concept + architecture  
+- Trigger modeling  
 
 ### Phase 2
-- Backend + APIs  
+- API integration  
 - Risk engine  
 
 ### Phase 3
@@ -317,4 +299,4 @@ Premiums dynamically adjust based on *risk score and real-time conditions*.
 
 ShieldGig aims to become the *first automated income protection system for gig workers*.
 
-ShieldGig converts insurance into a *real-time, data-driven financial safety net*.
+It transforms insurance into a **real-time, intelligent, and data-driven safety net**.
