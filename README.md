@@ -15,11 +15,11 @@ India’s gig economy relies on *delivery partners* who earn daily wages strictl
 
 However, workers face income loss due to *uncontrollable environmental disruptions* such as:
 
-- 🌧 Heavy Rain  
-- 🌡 Extreme Heatwaves  
-- 🌫 Severe Air Pollution  
-- 🚧 Government Curfews  
-- 🌊 Flood Alerts  
+-  Heavy Rain  
+-  Extreme Heatwaves  
+-  Severe Air Pollution  
+-  Government Curfews  
+-  Flood Alerts  
 
 During such events, workers may lose **20–30% of their weekly income**, and currently there is **no dedicated protection system** for this type of disruption.
 
