@@ -223,31 +223,21 @@ Fraud Score =
 
 ```mermaid
 flowchart TD
-A[User Input] --> B[GPS Data]
-A --> C[Motion Data]
-A --> D[Network Data]
-A --> E[Traffic Data]
-A --> F[Platform Data]
 
-B --> G[Validation Engine]
-C --> G
-D --> G
-E --> G
-F --> G
+A[User Data] --> B[Multi-Signal Validation]
 
-G --> H{Consistent Behavior?}
+B --> C{Consistent?}
 
-H -- Yes --> I[Approve]
-H -- No --> J[Flag Suspicious]
+C -- No --> D[Flag Suspicious]
+C -- Yes --> E[Proceed to Fraud Scoring]
 
-J --> K[Fraud Scoring]
+D --> F[Fraud Score]
+E --> F
 
-K --> L{Fraud Threshold?}
+F --> G{Fraud High?}
 
-L -- Yes --> M[Delay / Block]
-L -- No --> I
-
-I --> N[Risk Engine]
+G -- Yes --> H[Block/Delay]
+G -- No --> I[Send to Risk Engine]
 ```
 
 ---
@@ -273,11 +263,6 @@ Premiums are calibrated for sustainability (loss ratio balance).
 
 ---
 
-# Key Insight
-
-KavachSathi does not insure events.
-
-It insures **income impact caused by those events**.
 
 ---
 
