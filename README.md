@@ -132,8 +132,10 @@ Weights reflect real-world impact on income and are dynamically adjustable.
 ### Payout Logic
 
 ```text
-Risk > 70 → High Payout  
-40–70 → Partial  
+Risk > 70 → High Payout
+ 
+40–70 → Partial
+
 < 40 → No Payout  
 ```
 
