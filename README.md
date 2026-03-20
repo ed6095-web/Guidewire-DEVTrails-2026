@@ -112,7 +112,7 @@ G --> H[Wallet Credit]
 # System Architecture
 
 <p align="center">
-  <img src="images/architecture.png" width="900">
+  <img src="images/architecture.png" width="500">
 </p>
 
 - Backend aggregates real-time signals from multiple data oracles  
