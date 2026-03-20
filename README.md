@@ -11,9 +11,9 @@
 
 # 📌 Problem Statement
 
-India’s gig economy relies on *delivery partners* who earn daily wages strictly based on completed deliveries.
+India’s gig economy relies on delivery partners who earn daily wages strictly based on completed deliveries.
 
-However, workers face income loss due to *uncontrollable external disruptions* such as:
+However, workers face income loss due to uncontrollable external disruptions such as:
 
 - Heavy Rain  
 - Extreme Heatwaves  
@@ -21,7 +21,7 @@ However, workers face income loss due to *uncontrollable external disruptions* s
 - Mobility Restrictions (road blockages, restricted zones)  
 - Platform Activity Anomalies  
 
-During such events, workers may lose **20–30% of their weekly income**, and currently there is **no dedicated protection system** for this type of disruption.
+During such events, workers may lose **20–30% of their weekly income**, and there is no real-time protection system.
 
 ```mermaid
 pie title Weekly Income Loss Due to Disruptions
@@ -33,57 +33,43 @@ pie title Weekly Income Loss Due to Disruptions
 
 # Why This Matters
 
-India currently has *7+ million gig workers*, and the number is growing rapidly with platforms like **Swiggy, Zomato, Blinkit, and Zepto**.
+India has over 7 million gig workers, heavily dependent on daily income.
 
-Most of these workers depend on *daily earnings to survive*, meaning even **1–2 days of disruption** can significantly affect their financial stability.
+Even short disruptions (1–2 days) can significantly impact financial stability.
 
-Disruptions such as:
-
-- Environmental conditions  
-- Platform-level anomalies  
-- Mobility restrictions  
-
-can *instantly halt deliveries*, leaving workers without income.
-
-KavachSathi creates a *financial safety net* using automated parametric insurance.
+KavachSathi addresses this gap using **automated parametric insurance**.
 
 ---
 
 # Proposed Concept: KavachSathi
 
-*KavachSathi* is a *parametric micro-insurance platform* designed specifically for gig delivery workers.
-
-Instead of manual claims, the system uses *real-time external data signals* to detect disruptions and trigger payouts automatically.
+KavachSathi is a parametric micro-insurance system that eliminates manual claims using real-time external signals.
 
 ### Core Idea
 
-If real-world disruptions reduce earning capacity, the system *automatically compensates income loss.*
+If disruptions reduce earning capacity, the system automatically compensates income loss.
 
 ---
 
 # Core System Pillars
 
 ### 1. Weekly Micro-Premiums
-Aligned with the *weekly payout cycle* of gig workers.
+Aligned with gig workers’ earning cycle.
 
 ### 2. Algorithmic Risk Scoring
-Premiums dynamically adjust using:
-
-- Weather forecasts  
-- Platform activity signals  
-- Mobility conditions  
+- Weather conditions  
+- Platform activity (proxy-based)  
+- Mobility constraints  
 
 ### 3. Zero-Touch Claims
-No paperwork. Fully automated detection and payout.
+No manual intervention.
 
 ### 4. Instant Wallet Payouts
-Direct compensation to worker wallets.
+Real-time compensation.
 
 ---
 
 # Target User Persona
-
-Phase 1 focuses on *Food Delivery Partners*.
 
 <p align="center">
   <img src="images/persona.png" width="800">
@@ -93,198 +79,205 @@ Phase 1 focuses on *Food Delivery Partners*.
 
 # Workflow Scenario
 
-### Example Case
+Rahul earns ₹5000/week.
 
-Rahul is a delivery partner earning *₹5000 per week*.
+A disruption causes ₹1500 loss.
 
-A disruption reduces his working ability for two days, causing **₹1500 income loss**.
+System:
+1. Detects disruption  
+2. Validates conditions  
+3. Calculates risk  
+4. Triggers payout  
 
-### KavachSathi Protocol
-
-1. System detects external disruption via APIs  
-2. Trigger conditions are validated  
-3. Risk engine evaluates impact  
-4. Automatic payout is initiated  
-
-Rahul receives *₹800 instantly* with zero manual claim.
+Result: ₹800 credited instantly.
 
 ---
 
-# Visual System Workflow
+# Visual Workflow
 
 ```mermaid
 flowchart LR
-A[Worker Registers Policy] --> B[Policy Activated]
-B --> C[System Monitors External APIs]
+A[Worker Registers] --> B[Policy Active]
+B --> C[Monitor APIs]
 C --> D{Disruption Detected?}
 D -- No --> C
 D -- Yes --> E[Trigger Engine]
 E --> F[Risk Evaluation]
-F --> G[Automatic Payout]
-G --> H[Money Sent to Wallet]
+F --> G[Payout]
+G --> H[Wallet Credit]
 ```
 
 ---
 
 # System Architecture
 
-<p align="center">
-<img src="images/architecture.png" width="850">
-</p>
-
-### Architecture Components
-
-*Client Interface*
-- Worker dashboard  
-- Policy tracking  
-
-*Backend Node*
-- API polling  
-- Event monitoring  
-
-*Risk Engine*
-- Composite risk scoring  
-- Dynamic pricing  
-
-*Data Oracles*
-- Weather APIs  
-- Traffic / mobility data  
-- Platform status signals  
-
-*AI Agent*
-- Uses historical disruption vs earnings data to train models estimating income loss probability  
-- Dynamically adjusts risk weights  
-
-*Trigger Engine*
-- Validates parametric conditions  
-
-*Payment Gateway*
-- Simulated payout system  
+- Frontend: React / Next.js  
+- Backend: Node.js  
+- Database: MongoDB  
+- AI Engine: Python (Scikit-learn)  
+- APIs: Weather, Traffic  
+- Payments: Razorpay Sandbox  
 
 ---
 
 # Decision Engine (Core Innovation)
 
-Unlike traditional rule-based systems, KavachSathi uses a **multi-factor decision model**.
-
 ```text
 Risk Score =
-(Environment Factor × 0.4) +
-(Platform Impact × 0.4) +
-(Mobility Factor × 0.2)
+(Environment × 0.4) +
+(Platform × 0.4) +
+(Mobility × 0.2)
 ```
 
-Weights are dynamically adjusted based on historical correlation between disruption type and income loss.
+Weights reflect real-world impact on income and are dynamically adjustable.
 
 ### Payout Logic
 
 ```text
 Risk > 70 → High Payout  
-40–70 → Partial Payout  
+40–70 → Partial  
 < 40 → No Payout  
 ```
 
-This transforms raw external events into quantified income risk, making payouts fair, transparent, and automatic.
-
 ---
 
-# Decision Tree Model
+# Decision Tree
 
 ```mermaid
 flowchart TD
-
-A[Start Monitoring] --> B{Disruption Detected?}
-
+A[Start Monitoring] --> B{Disruption?}
 B -- No --> A
+B -- Yes --> C{Type}
 
-B -- Yes --> C{Disruption Type}
+C -->|0.4| D[Environment]
+C -->|0.4| E[Platform]
+C -->|0.2| F[Mobility]
 
-C -->|0.4| D[Environmental]
-C -->|0.4| E[Platform Activity]
-C -->|0.2| F[Mobility Restriction]
-
-D --> G[Evaluate Severity]
+D --> G[Severity]
 E --> G
 F --> G
 
-G --> H{Impact on Earnings}
+G --> H{Impact}
 
 H -- Low --> I[No Payout]
+H -- Medium --> J[Partial]
+H -- High --> K[High]
 
-H -- Medium --> J[Partial Risk]
-
-H -- High --> K[High Risk]
-
-J --> L[Compute Risk Score]
+J --> L[Compute Risk]
 K --> L
 
-L --> M{Risk > Threshold?}
-
+L --> M{Threshold?}
+M -- Yes --> N[Payout]
 M -- No --> I
-M -- Yes --> N[Trigger Payout]
-
-N --> O[Wallet Credit]
-I --> P[Continue Monitoring]
-O --> P
-P --> A
 ```
 
 ---
 
-# Parametric Triggers & Payout Logic
+# Parametric Triggers
+
+| Category | Condition | Payout |
+|----------|----------|--------|
+| Rain | >60mm | ₹250 |
+| Heat | >45°C | ₹200 |
+| AQI | >400 | ₹150 |
+| Platform | Demand drop / downtime | ₹350 |
+| Mobility | Route blocked | ₹300 |
+
+---
+
+# 🚨 Adversarial Defense & Anti-Spoofing Strategy
+
+## Core Principle
+
+The system does not rely on GPS alone.
+
+It validates **behavioral consistency across multiple independent signals**.
+
+---
+
+## Multi-Signal Validation
+
+- GPS location  
+- Device motion (accelerometer patterns)  
+- Network signal behavior  
+- Traffic API correlation  
+- Platform activity (proxy-based demand patterns)  
+- Historical user movement  
+- Cluster detection (group fraud patterns)  
+
+---
+
+## Fraud Detection Model
+
+```text
+Fraud Score =
+(Motion × 0.3) +
+(Network × 0.2) +
+(Location × 0.3) +
+(Cluster × 0.2)
+```
+
+---
+
+## Anti-Spoofing Architecture
 
 ```mermaid
-xychart-beta
-    title "Core Trigger Payout Matrix (₹)"
-    x-axis ["Rain","Heat","Pollution","Platform","Mobility"]
-    y-axis "Payout Amount (₹)" 0 --> 600
-    bar [250,200,150,350,300]
+flowchart TD
+A[User Input] --> B[GPS Data]
+A --> C[Motion Data]
+A --> D[Network Data]
+A --> E[Traffic Data]
+A --> F[Platform Data]
+
+B --> G[Validation Engine]
+C --> G
+D --> G
+E --> G
+F --> G
+
+G --> H{Consistent Behavior?}
+
+H -- Yes --> I[Approve]
+H -- No --> J[Flag Suspicious]
+
+J --> K[Fraud Scoring]
+
+K --> L{Fraud Threshold?}
+
+L -- Yes --> M[Delay / Block]
+L -- No --> I
+
+I --> N[Risk Engine]
 ```
 
-## Trigger Table
+---
 
-| Category | Trigger | Condition | Payout |
-|----------|--------|----------|--------|
-| Environmental | Heavy Rain | Rainfall > 60mm | ₹250 |
-| Environmental | Extreme Heat | Temperature > 45°C | ₹200 |
-| Environmental | Pollution | AQI > 400 | ₹150 |
-| Platform | Activity Anomaly | Proxy-based demand drop / downtime | ₹350 |
-| Mobility | Mobility Restriction | Route blockage / restricted zone | ₹300 |
+## UX Balance
+
+- Flagged claims are not instantly rejected  
+- Delayed verification applied  
+- Partial payout allowed  
+- Repeated fraud triggers stricter checks  
 
 ---
 
-# Weekly Premium Model
+# Premium Model
 
-| Tier     | Weekly Premium | Max Coverage | Per Event Cap |
-|----------|---------------|-------------|---------------|
-| Basic    | ₹25           | ₹500        | ₹150–₹200     |
-| Standard | ₹40           | ₹1000       | ₹250–₹300     |
-| Pro      | ₹60           | ₹1800       | Up to ₹400    |
+| Tier | Weekly | Coverage |
+|------|-------|----------|
+| Basic | ₹25 | ₹500 |
+| Standard | ₹40 | ₹1000 |
+| Pro | ₹60 | ₹1800 |
 
-Premiums are calibrated to maintain a sustainable loss ratio.
-
----
-
-# Fraud Prevention
-
-- GPS-based location validation  
-- API cross-verification  
-- Duplicate claim prevention  
-
-Example: Claims from unaffected zones are automatically rejected.
+Premiums are calibrated for sustainability (loss ratio balance).
 
 ---
 
-# Technology Stack
+# Key Insight
 
-| Layer | Technology |
-|------|-----------|
-| Frontend | React.js / Next.js |
-| Backend | Node.js + Express |
-| Database | MongoDB |
-| AI / ML | Python, Scikit-learn |
-| APIs | Weather, Traffic |
-| Payments | Razorpay Sandbox |
+KavachSathi does not insure events.
+
+It insures **income impact caused by those events**.
 
 ---
 
@@ -309,18 +302,16 @@ Example: Claims from unaffected zones are automatically rejected.
 
 | Member | Role |
 |------|------|
-| *Eashan Darsh* | System Architecture & Frontend |
-| *Ved Deshmukh* | Research |
-| *Shashwat Chaturvedi* | Backend |
-| *Sneha Basera* | Data Collection |
-| *Asim Shankar* | AI / ML |
+| Eashan Darsh | System Architecture & Frontend |
+| Ved Deshmukh | Research |
+| Shashwat Chaturvedi | Backend |
+| Sneha Basera | Data Collection |
+| Asim Shankar | AI / ML |
 
 ---
 
 # Vision
 
-KavachSathi aims to become the *first automated income protection system for gig workers*.
+KavachSathi transforms insurance into a **real-time, data-driven protection system**.
 
-It transforms insurance into a **real-time, intelligent, and data-driven safety net**.
-
-**From claim-based insurance to trigger-based protection.**
+From claim-based insurance to trigger-based protection.
