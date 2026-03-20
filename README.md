@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=00FFCC&center=true&vCenter=true&width=800&lines=ShieldGig;AI-Powered+Income+Protection;Parametric+Insurance+System" alt="Animated Header" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=00FFCC&center=true&vCenter=true&width=800&lines=KavachSathi;AI-Powered+Income+Protection;Parametric+Insurance+System" alt="Animated Header" />
 </div>
 
 <p align="center">
@@ -45,13 +45,13 @@ Disruptions such as:
 
 can *instantly halt deliveries*, leaving workers without income.
 
-ShieldGig creates a *financial safety net* using automated parametric insurance.
+KavachSathi creates a *financial safety net* using automated parametric insurance.
 
 ---
 
-# Proposed Concept: ShieldGig
+# Proposed Concept: KavachSathi
 
-*ShieldGig* is a *parametric micro-insurance platform* designed specifically for gig delivery workers.
+*KavachSathi* is a *parametric micro-insurance platform* designed specifically for gig delivery workers.
 
 Instead of manual claims, the system uses *real-time external data signals* to detect disruptions and trigger payouts automatically.
 
@@ -99,7 +99,7 @@ Rahul is a delivery partner earning *₹5000 per week*.
 
 A disruption reduces his working ability for two days, causing **₹1500 income loss**.
 
-### ShieldGig Protocol
+### KavachSathi Protocol
 
 1. System detects external disruption via APIs  
 2. Trigger conditions are validated  
@@ -165,7 +165,7 @@ G --> H[Money Sent to Wallet]
 
 # Decision Engine (Core Innovation)
 
-Unlike traditional rule-based systems, ShieldGig uses a **multi-factor decision model**.
+Unlike traditional rule-based systems, KavachSathi uses a **multi-factor decision model**.
 
 ```text
 Risk Score =
@@ -319,7 +319,7 @@ Example: Claims from unaffected zones are automatically rejected.
 
 # Vision
 
-ShieldGig aims to become the *first automated income protection system for gig workers*.
+KavachSathi aims to become the *first automated income protection system for gig workers*.
 
 It transforms insurance into a **real-time, intelligent, and data-driven safety net**.
 
