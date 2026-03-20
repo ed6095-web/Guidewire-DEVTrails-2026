@@ -11,46 +11,170 @@
 
 # 📌 Problem Statement
 
-India’s gig economy relies on delivery partners who earn daily wages based on completed deliveries.
+India’s gig economy relies on *delivery partners* who earn daily wages strictly based on completed deliveries.
 
-Income is vulnerable to **external disruptions** such as:
+However, workers face income loss due to *uncontrollable external disruptions* such as:
 
 - Heavy Rain  
 - Extreme Heatwaves  
 - Severe Air Pollution  
-- Mobility Restrictions  
+- Mobility Restrictions (road blockages, restricted zones)  
 - Platform Activity Anomalies  
 
-These events can reduce weekly income by **20–30%**, with no existing real-time protection system.
+During such events, workers may lose **20–30% of their weekly income**, and currently there is **no dedicated protection system** for this type of disruption.
+
+```mermaid
+pie title Weekly Income Loss Due to Disruptions
+    "Retained Earnings" : 70
+    "Income Lost to Disruptions" : 30
+```
 
 ---
 
-# Proposed Concept
+# Why This Matters
 
-ShieldGig is a **parametric micro-insurance system** that automates income protection using real-time external signals.
+India currently has *7+ million gig workers*, and the number is growing rapidly with platforms like **Swiggy, Zomato, Blinkit, and Zepto**.
 
-Unlike traditional insurance, ShieldGig eliminates claim delays by using **predefined parametric triggers**, enabling **instant and unbiased payouts**.
+Most of these workers depend on *daily earnings to survive*, meaning even **1–2 days of disruption** can significantly affect their financial stability.
+
+Disruptions such as:
+
+- Environmental conditions  
+- Platform-level anomalies  
+- Mobility restrictions  
+
+can *instantly halt deliveries*, leaving workers without income.
+
+ShieldGig creates a *financial safety net* using automated parametric insurance.
 
 ---
 
-# Core Mechanism
+# Proposed Concept: ShieldGig
 
-The system converts real-world disruptions into **quantified income risk**, then triggers payouts automatically.
+*ShieldGig* is a *parametric micro-insurance platform* designed specifically for gig delivery workers.
+
+Instead of manual claims, the system uses *real-time external data signals* to detect disruptions and trigger payouts automatically.
+
+### Core Idea
+
+If real-world disruptions reduce earning capacity, the system *automatically compensates income loss.*
+
+---
+
+# Core System Pillars
+
+### 1. Weekly Micro-Premiums
+Aligned with the *weekly payout cycle* of gig workers.
+
+### 2. Algorithmic Risk Scoring
+Premiums dynamically adjust using:
+
+- Weather forecasts  
+- Platform activity signals  
+- Mobility conditions  
+
+### 3. Zero-Touch Claims
+No paperwork. Fully automated detection and payout.
+
+### 4. Instant Wallet Payouts
+Direct compensation to worker wallets.
+
+---
+
+# Target User Persona
+
+Phase 1 focuses on *Food Delivery Partners*.
+
+<p align="center">
+  <img src="images/persona.png" width="800">
+</p>
+
+---
+
+# Workflow Scenario
+
+### Example Case
+
+Rahul is a delivery partner earning *₹5000 per week*.
+
+A disruption reduces his working ability for two days, causing **₹1500 income loss**.
+
+### ShieldGig Protocol
+
+1. System detects external disruption via APIs  
+2. Trigger conditions are validated  
+3. Risk engine evaluates impact  
+4. Automatic payout is initiated  
+
+Rahul receives *₹800 instantly* with zero manual claim.
+
+---
+
+# Visual System Workflow
+
+```mermaid
+flowchart LR
+A[Worker Registers Policy] --> B[Policy Activated]
+B --> C[System Monitors External APIs]
+C --> D{Disruption Detected?}
+D -- No --> C
+D -- Yes --> E[Trigger Engine]
+E --> F[Risk Evaluation]
+F --> G[Automatic Payout]
+G --> H[Money Sent to Wallet]
+```
+
+---
+
+# System Architecture
+
+<p align="center">
+<img src="images/architecture.png" width="850">
+</p>
+
+### Architecture Components
+
+*Client Interface*
+- Worker dashboard  
+- Policy tracking  
+
+*Backend Node*
+- API polling  
+- Event monitoring  
+
+*Risk Engine*
+- Composite risk scoring  
+- Dynamic pricing  
+
+*Data Oracles*
+- Weather APIs  
+- Traffic / mobility data  
+- Platform status signals  
+
+*AI Agent*
+- Uses historical disruption vs earnings data to train models estimating income loss probability  
+- Dynamically adjusts risk weights  
+
+*Trigger Engine*
+- Validates parametric conditions  
+
+*Payment Gateway*
+- Simulated payout system  
 
 ---
 
 # Decision Engine (Core Innovation)
 
-ShieldGig uses a **multi-factor weighted decision model**, not simple rule-based triggers.
+Unlike traditional rule-based systems, ShieldGig uses a **multi-factor decision model**.
 
 ```text
 Risk Score =
-(Environment × 0.4) +
-(Platform × 0.4) +
-(Mobility × 0.2)
+(Environment Factor × 0.4) +
+(Platform Impact × 0.4) +
+(Mobility Factor × 0.2)
 ```
 
-Weights are dynamically adjusted using historical correlation between disruptions and income loss.
+Weights are dynamically adjusted based on historical correlation between disruption type and income loss.
 
 ### Payout Logic
 
@@ -59,6 +183,8 @@ Risk > 70 → High Payout
 40–70 → Partial Payout  
 < 40 → No Payout  
 ```
+
+This transforms raw external events into quantified income risk, making payouts fair, transparent, and automatic.
 
 ---
 
@@ -105,69 +231,96 @@ P --> A
 
 ---
 
-# Parametric Triggers
+# Parametric Triggers & Payout Logic
+
+```mermaid
+xychart-beta
+    title "Core Trigger Payout Matrix (₹)"
+    x-axis ["Rain","Heat","Pollution","Platform","Mobility"]
+    y-axis "Payout Amount (₹)" 0 --> 600
+    bar [250,200,150,350,300]
+```
+
+## Trigger Table
 
 | Category | Trigger | Condition | Payout |
 |----------|--------|----------|--------|
-| Environmental | Rain | Rainfall > 60mm | ₹250 |
-| Environmental | Heat | Temperature > 45°C | ₹200 |
+| Environmental | Heavy Rain | Rainfall > 60mm | ₹250 |
+| Environmental | Extreme Heat | Temperature > 45°C | ₹200 |
 | Environmental | Pollution | AQI > 400 | ₹150 |
 | Platform | Activity Anomaly | Proxy-based demand drop / downtime | ₹350 |
-| Mobility | Restriction | Route blockage / restricted zone | ₹300 |
+| Mobility | Mobility Restriction | Route blockage / restricted zone | ₹300 |
 
 ---
 
-# Data & Feasibility
+# Weekly Premium Model
 
-- Weather → Public APIs  
-- Mobility → Traffic APIs  
-- Platform signals → **Proxy indicators (order density, time-based demand simulation)**  
+| Tier     | Weekly Premium | Max Coverage | Per Event Cap |
+|----------|---------------|-------------|---------------|
+| Basic    | ₹25           | ₹500        | ₹150–₹200     |
+| Standard | ₹40           | ₹1000       | ₹250–₹300     |
+| Pro      | ₹60           | ₹1800       | Up to ₹400    |
 
-This ensures feasibility without relying on proprietary platform data.
-
----
-
-# Risk & Pricing Logic
-
-Premiums are calibrated to maintain a **balanced loss ratio**, ensuring system sustainability.
-
-| Tier | Weekly Premium | Coverage |
-|------|--------------|----------|
-| Basic | ₹25 | ₹500 |
-| Standard | ₹40 | ₹1000 |
-| Pro | ₹60 | ₹1800 |
+Premiums are calibrated to maintain a sustainable loss ratio.
 
 ---
 
 # Fraud Prevention
 
 - GPS-based location validation  
-- Cross-verification with API data  
+- API cross-verification  
 - Duplicate claim prevention  
 
 Example: Claims from unaffected zones are automatically rejected.
 
 ---
 
-# System Architecture
+# Technology Stack
 
-- Frontend: React / Next.js  
-- Backend: Node.js  
-- Database: MongoDB  
-- AI: Python (Scikit-learn)  
-- APIs: Weather, Traffic  
-- Payments: Razorpay Sandbox  
+| Layer | Technology |
+|------|-----------|
+| Frontend | React.js / Next.js |
+| Backend | Node.js + Express |
+| Database | MongoDB |
+| AI / ML | Python, Scikit-learn |
+| APIs | Weather, Traffic |
+| Payments | Razorpay Sandbox |
 
 ---
 
-# Key Insight
+# Development Roadmap
 
-ShieldGig does not insure events.
+### Phase 1
+- Concept + architecture  
+- Trigger modeling  
 
-It insures **income impact caused by those events**.
+### Phase 2
+- API integration  
+- Risk engine  
+
+### Phase 3
+- Automation  
+- Fraud detection  
+- Deployment  
+
+---
+
+# Team
+
+| Member | Role |
+|------|------|
+| *Eashan Darsh* | System Architecture & Frontend |
+| *Ved Deshmukh* | Research |
+| *Shashwat Chaturvedi* | Backend |
+| *Sneha Basera* | Data Collection |
+| *Asim Shankar* | AI / ML |
 
 ---
 
 # Vision
 
-From claim-based insurance to **trigger-based protection**.
+ShieldGig aims to become the *first automated income protection system for gig workers*.
+
+It transforms insurance into a **real-time, intelligent, and data-driven safety net**.
+
+**From claim-based insurance to trigger-based protection.**
