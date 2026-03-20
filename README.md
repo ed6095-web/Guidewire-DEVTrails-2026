@@ -18,14 +18,14 @@ However, workers face income loss due to *uncontrollable environmental and opera
 - Heavy Rain  
 - Extreme Heatwaves  
 - Severe Air Pollution  
-- Government Curfews  
+- Mobility restrictions (road blockages, restricted zones)  
 - Sudden drop in order demand  
 - Platform downtime  
 
 During such events, workers may lose **20–30% of their weekly income**, and currently there is **no dedicated protection system** for this type of disruption.
 
 ```mermaid
-pie title Weekly Income Loss Due to Environmental Disruptions
+pie title Weekly Income Loss Due to Disruptions
     "Retained Earnings" : 70
     "Income Lost to Disruptions" : 30
 ```
@@ -77,7 +77,7 @@ Premiums dynamically adjust using:
 
 - Weather forecasts  
 - Demand trends  
-- Geographic conditions  
+- Mobility conditions  
 
 ### 3️. Zero-Touch Claims
 
@@ -111,7 +111,7 @@ A sudden disruption reduces available delivery orders for two days, causing **�
 
 ### ShieldGig Protocol
 
-1. System detects abnormal drop in activity or environmental trigger  
+1. System detects abnormal drop in activity or external disruption  
 2. Parametric condition is validated  
 3. System automatically initiates payout  
 4. Rahul receives *₹800 compensation instantly*  
@@ -158,14 +158,14 @@ G --> H[Money Sent to Wallet]
 
 *Risk Engine*
 
-- Calculates risk scores  
+- Calculates composite risk scores  
 - Determines dynamic premium pricing  
 
 *Data Oracles*
 
 - Weather APIs  
 - Demand signals  
-- Traffic data  
+- Traffic / mobility data  
 - Platform status  
 
 *AI Agent*
@@ -214,18 +214,18 @@ xychart-beta
 | Environmental | Heavy Rain | Rainfall > 60mm | ₹250 |
 | Environmental | Extreme Heat | Temperature > 45°C | ₹200 |
 | Environmental | Pollution | AQI > 400 | ₹150 |
-| Demand | Order Drop | Orders drop > 40% | ₹300 |
-| Demand | Zone Inactivity | No orders for 2 hours | ₹250 |
+| Demand | Order Drop | Orders drop > 40% in zone | ₹300 |
+| Demand | Zone Inactivity | No orders for 2+ hours | ₹250 |
 | Platform | Outage | Platform downtime detected | ₹350 |
-| Mobility | Traffic Lockdown | Congestion > threshold | ₹200 |
-| Access | Geo Restriction | Restricted zone detected | ₹300 |
+| Mobility | Traffic Lockdown | Congestion exceeds threshold | ₹200 |
+| Access | Route Restriction | Area inaccessible due to blockage | ₹300 |
 
 ---
 
 ### Dynamic Risk Score
 
 ```
-Risk Score = (Weather Factor × 0.4) + (Demand Drop × 0.4) + (Mobility Constraint × 0.2)
+Risk Score = (Weather Factor × 0.4) + (Demand Factor × 0.4) + (Mobility Factor × 0.2)
 ```
 
 ---
