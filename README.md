@@ -19,7 +19,7 @@ However, workers face income loss due to *uncontrollable external disruptions* s
 - Extreme Heatwaves  
 - Severe Air Pollution  
 - Mobility Restrictions (road blockages, restricted zones)  
-- Platform-Level Disruptions  
+- Platform Activity Anomalies  
 
 During such events, workers may lose **20–30% of their weekly income**, and currently there is **no dedicated protection system** for this type of disruption.
 
@@ -152,8 +152,8 @@ G --> H[Money Sent to Wallet]
 - Platform status signals  
 
 *AI Agent*
-- Learns historical patterns between disruptions and income loss  
-- Adjusts risk weights dynamically  
+- Uses historical disruption vs earnings data to train models estimating income loss probability  
+- Dynamically adjusts risk weights  
 
 *Trigger Engine*
 - Validates parametric conditions  
@@ -174,6 +174,8 @@ Risk Score =
 (Mobility Factor × 0.2)
 ```
 
+Weights are dynamically adjusted based on historical correlation between disruption type and income loss.
+
 ### Payout Logic
 
 ```text
@@ -182,7 +184,7 @@ Risk > 70 → High Payout
 < 40 → No Payout  
 ```
 
-This ensures payouts are based on **actual earning impact**, not just raw events.
+This transforms raw external events into quantified income risk, making payouts fair, transparent, and automatic.
 
 ---
 
@@ -206,7 +208,7 @@ G --> H[Dynamic Pricing]
 ```mermaid
 xychart-beta
     title "Core Trigger Payout Matrix (₹)"
-    x-axis ["Rain","Heat","Pollution","Outage","Mobility"]
+    x-axis ["Rain","Heat","Pollution","Platform","Mobility"]
     y-axis "Payout Amount (₹)" 0 --> 600
     bar [250,200,150,350,300]
 ```
@@ -218,7 +220,7 @@ xychart-beta
 | Environmental | Heavy Rain | Rainfall > 60mm | ₹250 |
 | Environmental | Extreme Heat | Temperature > 45°C | ₹200 |
 | Environmental | Pollution | AQI > 400 | ₹150 |
-| Platform | Platform Disruption | Abnormal drop in activity / downtime | ₹350 |
+| Platform | Activity Anomaly | Abnormal drop in platform activity / downtime | ₹350 |
 | Mobility | Mobility Restriction | Route blockage / restricted zone | ₹300 |
 
 ---
@@ -239,7 +241,7 @@ Premiums dynamically adjust based on **risk score and location conditions**.
 
 ### Risk Prediction
 - Weather patterns  
-- Platform disruptions  
+- Platform anomalies  
 - Mobility data  
 
 ### Dynamic Pricing
