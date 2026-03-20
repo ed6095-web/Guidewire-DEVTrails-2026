@@ -37,7 +37,7 @@ India has over 7 million gig workers, heavily dependent on daily income.
 
 Even short disruptions (1–2 days) can significantly impact financial stability.
 
-KavachSathi addresses this gap using **automated parametric insurance**.
+KavachSathi addresses this gap using automated parametric insurance.
 
 ---
 
@@ -113,7 +113,12 @@ G --> H[Wallet Credit]
 
 <p align="center">
   <img src="images/architecture.png" width="900">
-</p> 
+</p>
+
+- Backend aggregates real-time signals from multiple data oracles  
+- AI Risk Engine computes disruption impact score  
+- POP Validator performs fraud detection before claim approval  
+- Smart Trigger Logic activates payouts when thresholds are crossed  
 
 ---
 
@@ -121,7 +126,6 @@ G --> H[Wallet Credit]
 
 ```text
 Risk Score = (Environment × 0.4) + (Platform × 0.4) + (Mobility × 0.2)
-
 ```
 
 Weights reflect real-world impact on income and are dynamically adjustable.
@@ -129,12 +133,12 @@ Weights reflect real-world impact on income and are dynamically adjustable.
 ### Payout Logic
 
 ```text
-Risk > 70 → High Payout
- 
-40–70 → Partial
-
+Risk > 70 → High Payout  
+40–70 → Partial  
 < 40 → No Payout  
 ```
+
+Thresholds are calibrated using historical disruption vs income loss patterns and can be dynamically tuned.
 
 ---
 
@@ -167,6 +171,9 @@ L --> M{Threshold?}
 M -- Yes --> N[Payout]
 M -- No --> I
 ```
+
+These payouts are derived based on disruption severity and its real-world impact on earnings:
+
 ```mermaid
 xychart-beta
     title "Trigger-wise Payout Distribution (₹)"
@@ -174,6 +181,7 @@ xychart-beta
     y-axis "Payout (₹)" 0 --> 400
     bar [250,200,150,350,300]
 ```
+
 ## Trigger Table
 
 | Category | Trigger | Condition | Payout |
@@ -192,19 +200,19 @@ xychart-beta
 
 The system does not rely on GPS alone.
 
-It validates **behavioral consistency across multiple independent signals**.
+It validates behavioral consistency across multiple independent signals.
 
 ---
 
 ## Multi-Signal Validation
 
 - GPS location  
-- Device motion (accelerometer patterns)  
-- Network signal behavior  
-- Traffic API correlation  
-- Platform activity (proxy-based demand patterns)  
-- Historical user movement  
-- Cluster detection (group fraud patterns)  
+- Device motion  
+- Network behavior  
+- Traffic correlation  
+- Platform activity patterns  
+- Historical movement  
+- Cluster detection  
 
 ---
 
@@ -212,7 +220,6 @@ It validates **behavioral consistency across multiple independent signals**.
 
 ```text
 Fraud Score = (Motion × 0.3) + (Network × 0.2) + (Location × 0.3) + (Cluster × 0.2)
-
 ```
 
 ---
@@ -235,26 +242,27 @@ F --> G
 
 G --> H{Consistent Behavior?}
 
-H -- Yes --> I[Approve]
 H -- No --> J[Flag Suspicious]
+H -- Yes --> K[Proceed to Fraud Scoring]
 
-J --> K[Fraud Scoring]
+J --> L[Fraud Score]
+K --> L
 
-K --> L{Fraud Threshold?}
+L --> M{Fraud High?}
 
-L -- Yes --> M[Delay / Block]
-L -- No --> I
+M -- Yes --> N[Delay / Block]
+M -- No --> O[Forward to Risk Engine]
 
+O --> P[Payout Decision]
 ```
 
 ---
 
 ## UX Balance
 
-- Flagged claims are not instantly rejected  
-- Delayed verification applied  
-- Partial payout allowed  
-- Repeated fraud triggers stricter checks  
+- Suspicious cases are delayed, not instantly rejected  
+- Partial payouts allowed for borderline cases  
+- Repeated anomalies trigger stricter checks  
 
 ---
 
@@ -268,6 +276,7 @@ L -- No --> I
 | AI / ML | Python, Scikit-learn |
 | APIs | Weather, Traffic |
 | Payments | Razorpay Sandbox |
+
 ---
 
 # Development Roadmap
@@ -301,6 +310,6 @@ L -- No --> I
 
 # Vision
 
-KavachSathi transforms insurance into a **real-time, data-driven protection system**.
+KavachSathi transforms insurance into a real-time, data-driven protection system.
 
 From claim-based insurance to trigger-based protection.
