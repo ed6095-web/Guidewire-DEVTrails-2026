@@ -111,12 +111,9 @@ G --> H[Wallet Credit]
 
 # System Architecture
 
-- Frontend: React / Next.js  
-- Backend: Node.js  
-- Database: MongoDB  
-- AI Engine: Python (Scikit-learn)  
-- APIs: Weather, Traffic  
-- Payments: Razorpay Sandbox  
+<p align="center">
+  <img src="images/architecture.png" width="900">
+</p> 
 
 ---
 
