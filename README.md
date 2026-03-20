@@ -125,7 +125,7 @@ G --> H[Wallet Credit]
 # Decision Engine (Core Innovation)
 
 <p align="center">
-  <img src="images/decision.png" width="500">
+  <img src="images/decision.png" width="590">
 </p>
 
 ```text
