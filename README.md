@@ -261,9 +261,6 @@ G -- No --> I[Send to Risk Engine]
 | Payments | Razorpay Sandbox |
 ---
 
-
----
-
 # Development Roadmap
 
 ### Phase 1
