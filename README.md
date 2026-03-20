@@ -234,30 +234,34 @@ Fraud Score = (Motion × 0.3) + (Network × 0.2) + (Location × 0.3) + (Cluster 
 
 ```mermaid
 flowchart TD
-A[User Input] --> B[GPS Data]
-A --> C[Motion Data]
-A --> D[Network Data]
-A --> E[Traffic Data]
-A --> F[Platform Data]
 
-B --> G[Validation Engine]
+A[User Activity] --> B[GPS Signal]
+A --> C[Motion Pattern]
+A --> D[Network Behavior]
+A --> E[Traffic API]
+A --> F[Platform Activity]
+
+B --> G[POP Validator]
 C --> G
 D --> G
 E --> G
 F --> G
 
-G --> H{Consistent Behavior?}
+G --> H{Behavior Consistent?}
 
-H -- No --> J[Flag Suspicious]
-H -- Yes --> K[Proceed to Fraud Scoring]
+H -- No --> I[Flag Suspicious]
 
-J --> L[Fraud Score]
-K --> L
+H -- Yes --> J[Trusted Data]
 
-L --> M{Fraud High?}
+I --> K[Fraud Scoring Engine]
+J --> K
 
-M -- Yes --> N[Delay / Block]
+K --> L{Fraud Score High?}
 
+L -- Yes --> M[Delay / Block Claim]
+L -- No --> N[Forward to Risk Engine]
+
+N --> O[Smart Trigger Logic]
 O --> P[Payout Decision]
 ```
 
