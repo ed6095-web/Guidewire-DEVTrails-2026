@@ -171,17 +171,15 @@ M -- Yes --> N[Payout]
 M -- No --> I
 ```
 
----
+## Trigger Table
 
-# Parametric Triggers
-
-| Category | Condition | Payout |
-|----------|----------|--------|
-| Rain | >60mm | ₹250 |
-| Heat | >45°C | ₹200 |
-| AQI | >400 | ₹150 |
-| Platform | Demand drop / downtime | ₹350 |
-| Mobility | Route blocked | ₹300 |
+| Category | Trigger | Condition | Payout |
+|----------|--------|----------|--------|
+| Environmental | Heavy Rain | Rainfall > 60mm | ₹250 |
+| Environmental | Extreme Heat | Temperature > 45°C | ₹200 |
+| Environmental | Pollution | AQI > 400 | ₹150 |
+| Platform | Activity Anomaly | Proxy-based demand drop / downtime | ₹350 |
+| Mobility | Mobility Restriction | Route blockage / restricted zone | ₹300 |
 
 ---
 
@@ -251,16 +249,16 @@ G -- No --> I[Send to Risk Engine]
 
 ---
 
-# Premium Model
+# Technology Stack
 
-| Tier | Weekly | Coverage |
-|------|-------|----------|
-| Basic | ₹25 | ₹500 |
-| Standard | ₹40 | ₹1000 |
-| Pro | ₹60 | ₹1800 |
-
-Premiums are calibrated for sustainability (loss ratio balance).
-
+| Layer | Technology |
+|------|-----------|
+| Frontend | React.js / Next.js |
+| Backend | Node.js + Express |
+| Database | MongoDB |
+| AI / ML | Python, Scikit-learn |
+| APIs | Weather, Traffic |
+| Payments | Razorpay Sandbox |
 ---
 
 
