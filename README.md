@@ -72,7 +72,7 @@ Real-time compensation.
 # Target User Persona
 
 <p align="center">
-  <img src="images/persona.png" width="690">
+  <img src="images/persona.png" width="750">
 </p>
 
 ---
