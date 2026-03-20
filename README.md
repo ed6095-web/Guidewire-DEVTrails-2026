@@ -72,7 +72,7 @@ Real-time compensation.
 # Target User Persona
 
 <p align="center">
-  <img src="images/persona.png" width="500">
+  <img src="images/persona.png" width="600">
 </p>
 
 ---
@@ -112,7 +112,7 @@ G --> H[Wallet Credit]
 # System Architecture
 
 <p align="center">
-  <img src="images/architecture.png" width="500">
+  <img src="images/architecture.png" width="570">
 </p>
 
 - Backend aggregates real-time signals from multiple data oracles  
