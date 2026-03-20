@@ -140,6 +140,11 @@ Risk > 70 → High Payout
 
 Thresholds are calibrated using historical disruption vs income loss patterns and can be dynamically tuned.
 
+Example:
+Environment = 80, Platform = 60, Mobility = 40  
+Risk Score = 0.4(80) + 0.4(60) + 0.2(40) = 64  
+→ Partial payout triggered
+
 ---
 
 # Decision Tree
@@ -212,7 +217,8 @@ It validates behavioral consistency across multiple independent signals.
 - Traffic correlation  
 - Platform activity patterns  
 - Historical movement  
-- Cluster detection  
+- Cluster detection
+- Platform anomalies are inferred using proxy signals such as order frequency drop, idle time, and cluster-based inactivity patterns.
 
 ---
 
