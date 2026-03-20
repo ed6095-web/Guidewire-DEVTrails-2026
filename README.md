@@ -199,7 +199,7 @@ xychart-beta
 
 ---
 
-# 🚨 Adversarial Defense & Anti-Spoofing Strategy
+# Adversarial Defense & Anti-Spoofing Strategy
 
 ## Core Principle
 
@@ -257,7 +257,6 @@ K --> L
 L --> M{Fraud High?}
 
 M -- Yes --> N[Delay / Block]
-M -- No --> O[Forward to Risk Engine]
 
 O --> P[Payout Decision]
 ```
