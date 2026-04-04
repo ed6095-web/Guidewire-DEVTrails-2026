@@ -168,6 +168,11 @@ Risk > 70 → High Payout
 < 40 → No Payout  
 ```
 
+This model ensures:
+
+* Objective, bias-free payouts
+* Real-time automated claim execution
+
 ---
 
 # Decision Tree
@@ -222,11 +227,19 @@ xychart-beta
 
 ---
 
-# =========================
-
 # 🔷 PHASE 2 – EXECUTION FLOW
 
-# =========================
+```mermaid
+flowchart LR
+A[User Registers] --> B[Select Policy]
+B --> C[Premium Calculated]
+C --> D[Policy Activated]
+D --> E[System Monitoring]
+E --> F{Disruption?}
+F -- Yes --> G[Claim Triggered]
+G --> H[Fraud Check]
+H --> I[Payout]
+```
 
 ---
 
@@ -239,13 +252,14 @@ xychart-beta
   <img src="images/registration.png" width="700">
 </p>
 
+---
 
 # Insurance Policy Management
 
-- Active policy  
-- Weekly premium  
-- Coverage limits  
-- Risk status  
+* Active policy
+* Weekly premium
+* Coverage limits
+* Risk status
 
 <p align="center">
   <img src="images/policy-preview.png" width="700">
@@ -257,6 +271,7 @@ xychart-beta
   </a>
 </p>
 
+---
 
 # Dynamic Premium Calculation
 
@@ -322,7 +337,7 @@ Profit → ₹14,000
 
 ### Compliance
 
-* Parametric insurance
+* Parametric insurance model
 * IRDAI aligned
 
 ---
@@ -330,7 +345,18 @@ Profit → ₹14,000
 # Adversarial Defense & Anti-Spoofing Strategy
 
 * Multi-signal validation
-* Behavior consistency
+* Behavioral consistency
+
+```mermaid
+flowchart TD
+A[User Data] --> B[Multi-Signal Validation]
+B --> C{Consistent?}
+C -- No --> D[Flag Suspicious]
+C -- Yes --> E[Fraud Scoring]
+E --> F{High Fraud?}
+F -- Yes --> G[Block / Delay]
+F -- No --> H[Send to Risk Engine]
+```
 
 ```text
 Fraud Score = (Motion × 0.3) + (Network × 0.2) + (Location × 0.3) + (Cluster × 0.2)
