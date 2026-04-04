@@ -150,19 +150,75 @@ G --> H[Wallet Credit]
 Risk Score = (Environment × 0.4) + (Platform × 0.4) + (Mobility × 0.2)
 ```
 
-Risk Score is constrained by system-level caps and segmentation before payout.
+Risk Score is constrained by caps and segmentation before payout.
+
+### Example
+
+Environment = 80
+Platform = 60
+Mobility = 40
+
+Risk Score = 64 → Partial payout
+
+### Payout Logic
+
+```text
+Risk > 70 → High Payout  
+40–70 → Partial  
+< 40 → No Payout  
+```
 
 ---
 
 # Decision Tree
 
-(keep your existing diagram)
+```mermaid
+flowchart TD
+A[Start Monitoring] --> B{Disruption?}
+B -- No --> A
+B -- Yes --> C{Type}
+
+C -->|0.4| D[Environment]
+C -->|0.4| E[Platform]
+C -->|0.2| F[Mobility]
+
+D --> G[Severity]
+E --> G
+F --> G
+
+G --> H{Impact}
+
+H -- Low --> I[No Payout]
+H -- Medium --> J[Partial]
+H -- High --> K[High]
+
+J --> L[Compute Risk]
+K --> L
+
+L --> M{Threshold?}
+M -- Yes --> N[Payout]
+M -- No --> I
+```
+
+```mermaid
+xychart-beta
+    title "Trigger-wise Payout Distribution (₹)"
+    x-axis ["Rain","Heat","Pollution","Platform","Mobility"]
+    y-axis "Payout (₹)" 0 --> 400
+    bar [250,200,150,350,300]
+```
 
 ---
 
 # Trigger Table
 
-(keep your existing table)
+| Category      | Trigger          | Condition              | Payout |
+| ------------- | ---------------- | ---------------------- | ------ |
+| Environmental | Heavy Rain       | Rainfall > 60mm        | ₹250   |
+| Environmental | Extreme Heat     | Temperature > 45°C     | ₹200   |
+| Environmental | Pollution        | AQI > 400              | ₹150   |
+| Platform      | Activity Anomaly | Demand drop / downtime | ₹350   |
+| Mobility      | Restriction      | Route blockage         | ₹300   |
 
 ---
 
@@ -176,11 +232,8 @@ Risk Score is constrained by system-level caps and segmentation before payout.
 
 # Registration Process
 
-User onboarding captures:
-
-* Location
-* Work type
-* Activity pattern
+* User enters location and work profile
+* System initializes risk baseline
 
 <p align="center">
   <img src="images/registration.png" width="700">
@@ -190,12 +243,10 @@ User onboarding captures:
 
 # Insurance Policy Management
 
-Dashboard displays:
-
 * Active policy
 * Weekly premium
 * Coverage limits
-* Risk level
+* Risk status
 
 <p align="center">
   <img src="images/policy.png" width="700">
@@ -205,13 +256,8 @@ Dashboard displays:
 
 # Dynamic Premium Calculation
 
-Premium dynamically adjusts using:
-
-* Risk score
-* Zone safety
-* Historical disruptions
-
-Example: safer zone → lower premium
+* Based on risk score
+* Adjusts by geography and history
 
 <p align="center">
   <img src="images/premium.png" width="700">
@@ -221,12 +267,10 @@ Example: safer zone → lower premium
 
 # Claims Management
 
-Automated claim lifecycle:
-
 1. Trigger detected
-2. Policy verified
-3. Fraud validation
-4. Payout processed
+2. Policy validated
+3. Fraud checked
+4. Payout executed
 
 <p align="center">
   <img src="images/claim.png" width="700">
@@ -246,9 +290,9 @@ Automated claim lifecycle:
 # Segment-Specific Insights
 
 * Urban → partial loss
-* Rural → total loss
-* Full-time → high protection
-* Part-time → flexible coverage
+* Rural → full loss
+* Full-time → high dependency
+* Part-time → flexible
 
 ---
 
@@ -274,15 +318,15 @@ Profit → ₹14,000
 
 ### Compliance
 
-* Parametric insurance model
-* IRDAI-aligned
+* Parametric insurance
+* IRDAI aligned
 
 ---
 
 # Adversarial Defense & Anti-Spoofing Strategy
 
 * Multi-signal validation
-* Behavioral consistency checks
+* Behavior consistency
 
 ```text
 Fraud Score = (Motion × 0.3) + (Network × 0.2) + (Location × 0.3) + (Cluster × 0.2)
