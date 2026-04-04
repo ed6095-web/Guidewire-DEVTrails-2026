@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=00FFCC&center=true&vCenter=true&width=800&lines=KavachSathi;AI-Powered+Income+Protection;Parametric+Insurance+System" alt="Animated Header" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=42&pause=1000&color=00FFCC&center=true&vCenter=true&width=800&lines=KavachSathi;AI-Powered+Income+Protection;Parametric+Insurance+System" />
 </div>
 
 <p align="center">
@@ -11,23 +11,24 @@
 
 # Table of Contents
 
-| **PHASE 1 – System Foundation** | **PHASE 2 – Evaluation & Depth** |
-|--------------------------------|----------------------------------|
-| [Problem Statement](#-problem-statement) | [Risk-Capping Mechanism](#risk-capping-mechanism) |
-| [Why This Matters](#why-this-matters) | [Segment-Specific Insights](#segment-specific-insights) |
-| [Proposed Concept](#proposed-concept-kavachsathi) | [Financial Viability Analysis](#financial-viability-analysis) |
-| [Core System Pillars](#core-system-pillars) | [Exclusions and Regulatory Awareness](#exclusions-and-regulatory-awareness) |
-| [Target User Persona](#target-user-persona) | |
-| [Workflow Scenario](#workflow-scenario) | |
-| [System Architecture](#system-architecture) | |
-| [Decision Engine](#decision-engine-core-innovation) | |
-| [Decision Tree](#decision-tree) | |
-| [Trigger Table](#trigger-table) | |
-| [Adversarial Defense](#adversarial-defense--anti-spoofing-strategy) | |
-| [Technology Stack](#technology-stack) | |
-| [Development Roadmap](#development-roadmap) | |
-| [Team](#team) | |
-| [Vision](#vision) | |
+| **PHASE 1 – System Foundation**                                     | **PHASE 2 – Execution & Evaluation**                                        |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [Problem Statement](#-problem-statement)                            | [Registration Process](#registration-process)                               |
+| [Why This Matters](#why-this-matters)                               | [Insurance Policy Management](#insurance-policy-management)                 |
+| [Proposed Concept](#proposed-concept-kavachsathi)                   | [Dynamic Premium Calculation](#dynamic-premium-calculation)                 |
+| [Core System Pillars](#core-system-pillars)                         | [Claims Management](#claims-management)                                     |
+| [Target User Persona](#target-user-persona)                         | [Risk-Capping Mechanism](#risk-capping-mechanism)                           |
+| [Workflow Scenario](#workflow-scenario)                             | [Segment-Specific Insights](#segment-specific-insights)                     |
+| [System Architecture](#system-architecture)                         | [Financial Viability Analysis](#financial-viability-analysis)               |
+| [Decision Engine](#decision-engine-core-innovation)                 | [Exclusions and Regulatory Awareness](#exclusions-and-regulatory-awareness) |
+| [Decision Tree](#decision-tree)                                     |                                                                             |
+| [Trigger Table](#trigger-table)                                     |                                                                             |
+| [Adversarial Defense](#adversarial-defense--anti-spoofing-strategy) |                                                                             |
+| [Technology Stack](#technology-stack)                               |                                                                             |
+| [Development Roadmap](#development-roadmap)                         |                                                                             |
+| [Team](#team)                                                       |                                                                             |
+| [Vision](#vision)                                                   |                                                                             |
+
 ---
 
 # 📌 Problem Statement
@@ -65,8 +66,6 @@ KavachSathi addresses this gap using automated parametric insurance.
 # Proposed Concept: KavachSathi
 
 KavachSathi is a parametric micro-insurance system that eliminates manual claims using real-time external signals.
-
-### Core Idea
 
 If disruptions reduce earning capacity, the system automatically compensates income loss.
 
@@ -137,11 +136,11 @@ G --> H[Wallet Credit]
   <img src="images/architecture.png" width="600">
 </p>
 
-* Backend aggregates real-time signals from multiple data sources
-* AI Risk Engine computes disruption impact score
-* POP Validator performs fraud detection
-* Smart Trigger Logic activates payouts
-* Premium Engine dynamically adjusts pricing based on risk and loss ratio
+* Backend aggregates real-time signals
+* AI Risk Engine computes disruption impact
+* POP Validator ensures authenticity
+* Smart Trigger Logic executes payout
+* Premium Engine dynamically adjusts pricing
 
 ---
 
@@ -151,113 +150,117 @@ G --> H[Wallet Credit]
 Risk Score = (Environment × 0.4) + (Platform × 0.4) + (Mobility × 0.2)
 ```
 
-Risk Score is further constrained by system-level risk caps and segment-based adjustments before final payout decision.
-
-### Example
-
-Environment = 80
-Platform = 60
-Mobility = 40
-
-Risk Score = 64 → Partial payout
-
-### Payout Logic
-
-```text
-Risk > 70 → High Payout  
-40–70 → Partial  
-< 40 → No Payout  
-```
+Risk Score is constrained by system-level caps and segmentation before payout.
 
 ---
 
 # Decision Tree
 
-```mermaid
-flowchart TD
-A[Start Monitoring] --> B{Disruption?}
-B -- No --> A
-B -- Yes --> C{Type}
-
-C -->|0.4| D[Environment]
-C -->|0.4| E[Platform]
-C -->|0.2| F[Mobility]
-
-D --> G[Severity]
-E --> G
-F --> G
-
-G --> H{Impact}
-
-H -- Low --> I[No Payout]
-H -- Medium --> J[Partial]
-H -- High --> K[High]
-
-J --> L[Compute Risk]
-K --> L
-
-L --> M{Threshold?}
-M -- Yes --> N[Payout]
-M -- No --> I
-```
-
-```mermaid
-xychart-beta
-    title "Trigger-wise Payout Distribution (₹)"
-    x-axis ["Rain","Heat","Pollution","Platform","Mobility"]
-    y-axis "Payout (₹)" 0 --> 400
-    bar [250,200,150,350,300]
-```
+(keep your existing diagram)
 
 ---
 
 # Trigger Table
 
-| Category      | Trigger          | Condition              | Payout |
-| ------------- | ---------------- | ---------------------- | ------ |
-| Environmental | Heavy Rain       | Rainfall > 60mm        | ₹250   |
-| Environmental | Extreme Heat     | Temperature > 45°C     | ₹200   |
-| Environmental | Pollution        | AQI > 400              | ₹150   |
-| Platform      | Activity Anomaly | Demand drop / downtime | ₹350   |
-| Mobility      | Restriction      | Route blockage         | ₹300   |
+(keep your existing table)
+
+---
+
+# =========================
+
+# 🔷 PHASE 2 – EXECUTION FLOW
+
+# =========================
+
+---
+
+# Registration Process
+
+User onboarding captures:
+
+* Location
+* Work type
+* Activity pattern
+
+<p align="center">
+  <img src="images/registration.png" width="700">
+</p>
+
+---
+
+# Insurance Policy Management
+
+Dashboard displays:
+
+* Active policy
+* Weekly premium
+* Coverage limits
+* Risk level
+
+<p align="center">
+  <img src="images/policy.png" width="700">
+</p>
+
+---
+
+# Dynamic Premium Calculation
+
+Premium dynamically adjusts using:
+
+* Risk score
+* Zone safety
+* Historical disruptions
+
+Example: safer zone → lower premium
+
+<p align="center">
+  <img src="images/premium.png" width="700">
+</p>
+
+---
+
+# Claims Management
+
+Automated claim lifecycle:
+
+1. Trigger detected
+2. Policy verified
+3. Fraud validation
+4. Payout processed
+
+<p align="center">
+  <img src="images/claim.png" width="700">
+</p>
 
 ---
 
 # Risk-Capping Mechanism
 
-* Weekly payout caps prevent over-exposure
-* Event-level payout limits restrict abuse
-* Frequency-based throttling for repeated triggers
-* Loss ratio monitoring (target: 60–70%)
-* If loss ratio > 85% → system restricts new policies
+* Weekly caps
+* Event caps
+* Loss ratio monitoring
+* Auto-stop if >85%
 
 ---
 
 # Segment-Specific Insights
 
-| Segment           | Insight                               |
-| ----------------- | ------------------------------------- |
-| Urban Workers     | Partial disruptions reduce efficiency |
-| Rural Workers     | Disruptions cause total income loss   |
-| Full-Time Workers | High dependency → higher protection   |
-| Part-Time Workers | Flexible micro-coverage               |
-
-Key insight: same disruption produces different economic impact across segments.
+* Urban → partial loss
+* Rural → total loss
+* Full-time → high protection
+* Part-time → flexible coverage
 
 ---
 
 # Financial Viability Analysis
 
-* Weekly Premium: ₹20–₹50
-* Target Loss Ratio: 60–70%
-* Expected Margin: 30–40%
+* Premium: ₹20–₹50
+* Loss ratio: 60–70%
 
 Example:
-1000 users × ₹40 = ₹40,000
-Payout (65%) = ₹26,000
-Margin = ₹14,000
-
-Premium engine continuously adapts based on historical payout trends to maintain stable loss ratio.
+1000 users → ₹40,000
+Payout → ₹26,000
+Profit → ₹14,000
 
 ---
 
@@ -265,23 +268,20 @@ Premium engine continuously adapts based on historical payout trends to maintain
 
 ### Exclusions
 
-* Health insurance
+* Health
 * Vehicle damage
-* Personal accidents
-* Non-disruption-related income loss
+* Non-disruption loss
 
 ### Compliance
 
 * Parametric insurance model
-* Transparent trigger-based payouts
-* Requires licensed insurer partnership (IRDAI compliance)
+* IRDAI-aligned
 
 ---
 
 # Adversarial Defense & Anti-Spoofing Strategy
 
-* Multi-signal validation (not GPS-only)
-* Motion, network, traffic, platform data
+* Multi-signal validation
 * Behavioral consistency checks
 
 ```text
@@ -307,7 +307,7 @@ Fraud Score = (Motion × 0.3) + (Network × 0.2) + (Location × 0.3) + (Cluster 
 
 Phase 1 → Concept
 Phase 2 → API + Risk Engine
-Phase 3 → Automation + Deployment
+Phase 3 → Automation
 
 ---
 
@@ -325,6 +325,6 @@ Phase 3 → Automation + Deployment
 
 # Vision
 
-KavachSathi transforms insurance into a real-time, data-driven protection system.
+KavachSathi transforms insurance into real-time protection.
 
-From claim-based insurance to trigger-based protection.
+---
