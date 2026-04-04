@@ -21,14 +21,25 @@
 * [Decision Engine](#decision-engine-core-innovation)
 * [Decision Tree](#decision-tree)
 * [Trigger Table](#trigger-table)
+
+### Critical Evaluation Sections (Judge Focus)
+
 * [Risk-Capping Mechanism](#risk-capping-mechanism)
+
 * [Segment-Specific Insights](#segment-specific-insights)
+
 * [Financial Viability Analysis](#financial-viability-analysis)
+
 * [Exclusions and Regulatory Awareness](#exclusions-and-regulatory-awareness)
+
 * [Adversarial Defense](#adversarial-defense--anti-spoofing-strategy)
+
 * [Technology Stack](#technology-stack)
+
 * [Development Roadmap](#development-roadmap)
+
 * [Team](#team)
+
 * [Vision](#vision)
 
 ---
@@ -77,23 +88,10 @@ If disruptions reduce earning capacity, the system automatically compensates inc
 
 # Core System Pillars
 
-### 1. Weekly Micro-Premiums
-
-Aligned with gig workers’ earning cycle.
-
-### 2. Algorithmic Risk Scoring
-
-* Weather conditions
-* Platform activity (proxy-based)
-* Mobility constraints
-
-### 3. Zero-Touch Claims
-
-No manual intervention.
-
-### 4. Instant Wallet Payouts
-
-Real-time compensation.
+1. Weekly Micro-Premiums
+2. Algorithmic Risk Scoring
+3. Zero-Touch Claims
+4. Instant Wallet Payouts
 
 ---
 
@@ -106,7 +104,7 @@ Real-time compensation.
 ### User Personas
 
 | Attribute         | Full-Time Earner      | Part-Time Earner    |
-| :---------------- | :-------------------- | :------------------ |
+| ----------------- | --------------------- | ------------------- |
 | Primary Goal      | Sustaining livelihood | Supplemental income |
 | Weekly Earnings   | ₹5,000 - ₹8,000+      | ₹1,500 - ₹3,000     |
 | Time on Road      | 10–12 hrs/day         | 3–5 hrs/day         |
@@ -118,7 +116,6 @@ Real-time compensation.
 # Workflow Scenario
 
 Rahul earns ₹5000/week.
-
 A disruption causes ₹1500 loss.
 
 System:
@@ -158,6 +155,7 @@ G --> H[Wallet Credit]
 * AI Risk Engine computes disruption impact score
 * POP Validator performs fraud detection
 * Smart Trigger Logic activates payouts
+* Premium Engine dynamically adjusts pricing based on risk and loss ratio
 
 ---
 
@@ -167,7 +165,7 @@ G --> H[Wallet Credit]
 Risk Score = (Environment × 0.4) + (Platform × 0.4) + (Mobility × 0.2)
 ```
 
-Weights reflect real-world impact on income.
+Risk Score is further constrained by system-level risk caps and segment-based adjustments before final payout decision.
 
 ### Example
 
@@ -243,32 +241,37 @@ xychart-beta
 
 * Weekly payout caps prevent over-exposure
 * Event-level payout limits restrict abuse
-* High-loss zones trigger dynamic premium adjustment
-* System pauses new enrollments if loss ratio exceeds threshold
+* Frequency-based throttling for repeated triggers
+* Loss ratio monitoring (target: 60–70%)
+* If loss ratio > 85% → system restricts new policies
 
 ---
 
 # Segment-Specific Insights
 
-| Segment   | Insight                               |
-| --------- | ------------------------------------- |
-| Urban     | Partial disruptions reduce efficiency |
-| Rural     | Full disruption stops income          |
-| Full-Time | High dependency → higher coverage     |
-| Part-Time | Flexible micro-coverage               |
+| Segment           | Insight                               |
+| ----------------- | ------------------------------------- |
+| Urban Workers     | Partial disruptions reduce efficiency |
+| Rural Workers     | Disruptions cause total income loss   |
+| Full-Time Workers | High dependency → higher protection   |
+| Part-Time Workers | Flexible micro-coverage               |
+
+Key insight: same disruption produces different economic impact across segments.
 
 ---
 
 # Financial Viability Analysis
 
-* Weekly premium: ₹20–₹50
-* Target payout ratio: 60–70%
-* Profit margin: ~30%
+* Weekly Premium: ₹20–₹50
+* Target Loss Ratio: 60–70%
+* Expected Margin: 30–40%
 
 Example:
 1000 users × ₹40 = ₹40,000
 Payout (65%) = ₹26,000
-Profit = ₹14,000
+Margin = ₹14,000
+
+Premium engine continuously adapts based on historical payout trends to maintain stable loss ratio.
 
 ---
 
@@ -279,31 +282,21 @@ Profit = ₹14,000
 * Health insurance
 * Vehicle damage
 * Personal accidents
+* Non-disruption-related income loss
 
 ### Compliance
 
 * Parametric insurance model
 * Transparent trigger-based payouts
-* Requires insurer partnership (IRDAI compliance)
+* Requires licensed insurer partnership (IRDAI compliance)
 
 ---
 
 # Adversarial Defense & Anti-Spoofing Strategy
 
-### Core Principle
-
-Multi-signal validation beyond GPS.
-
-### Signals Used
-
-* GPS
-* Motion
-* Network
-* Traffic
-* Platform activity
-* Historical patterns
-
-### Fraud Model
+* Multi-signal validation (not GPS-only)
+* Motion, network, traffic, platform data
+* Behavioral consistency checks
 
 ```text
 Fraud Score = (Motion × 0.3) + (Network × 0.2) + (Location × 0.3) + (Cluster × 0.2)
