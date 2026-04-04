@@ -11,37 +11,23 @@
 
 # Table of Contents
 
-* [Problem Statement](#-problem-statement)
-* [Why This Matters](#why-this-matters)
-* [Proposed Concept](#proposed-concept-kavachsathi)
-* [Core System Pillars](#core-system-pillars)
-* [Target User Persona](#target-user-persona)
-* [Workflow Scenario](#workflow-scenario)
-* [System Architecture](#system-architecture)
-* [Decision Engine](#decision-engine-core-innovation)
-* [Decision Tree](#decision-tree)
-* [Trigger Table](#trigger-table)
-
-### Critical Evaluation Sections (Judge Focus)
-
-* [Risk-Capping Mechanism](#risk-capping-mechanism)
-
-* [Segment-Specific Insights](#segment-specific-insights)
-
-* [Financial Viability Analysis](#financial-viability-analysis)
-
-* [Exclusions and Regulatory Awareness](#exclusions-and-regulatory-awareness)
-
-* [Adversarial Defense](#adversarial-defense--anti-spoofing-strategy)
-
-* [Technology Stack](#technology-stack)
-
-* [Development Roadmap](#development-roadmap)
-
-* [Team](#team)
-
-* [Vision](#vision)
-
+| **PHASE 1 – System Foundation** | **PHASE 2 – Evaluation & Depth** |
+|--------------------------------|----------------------------------|
+| [Problem Statement](#-problem-statement) | [Risk-Capping Mechanism](#risk-capping-mechanism) |
+| [Why This Matters](#why-this-matters) | [Segment-Specific Insights](#segment-specific-insights) |
+| [Proposed Concept](#proposed-concept-kavachsathi) | [Financial Viability Analysis](#financial-viability-analysis) |
+| [Core System Pillars](#core-system-pillars) | [Exclusions and Regulatory Awareness](#exclusions-and-regulatory-awareness) |
+| [Target User Persona](#target-user-persona) | |
+| [Workflow Scenario](#workflow-scenario) | |
+| [System Architecture](#system-architecture) | |
+| [Decision Engine](#decision-engine-core-innovation) | |
+| [Decision Tree](#decision-tree) | |
+| [Trigger Table](#trigger-table) | |
+| [Adversarial Defense](#adversarial-defense--anti-spoofing-strategy) | |
+| [Technology Stack](#technology-stack) | |
+| [Development Roadmap](#development-roadmap) | |
+| [Team](#team) | |
+| [Vision](#vision) | |
 ---
 
 # 📌 Problem Statement
