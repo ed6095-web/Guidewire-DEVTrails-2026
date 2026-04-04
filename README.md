@@ -241,16 +241,15 @@ xychart-beta
 
 ---
 
-# Insurance Policy Management
+## Insurance Policy Management
 
-* Active policy
-* Weekly premium
-* Coverage limits
-* Risk status
+- Active policy  
+- Weekly premium  
+- Coverage limits  
+- Risk status  
 
-<p align="center">
-  <img src="images/policy.png" width="700">
-</p>
+📄 **Policy Document Preview**  
+👉 [Open Policy PDF](images/policy.pdf)
 
 ---
 
