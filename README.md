@@ -241,15 +241,22 @@ xychart-beta
 
 ---
 
-## Insurance Policy Management
+# Insurance Policy Management
 
 - Active policy  
 - Weekly premium  
 - Coverage limits  
 - Risk status  
 
-📄 **Policy Document Preview**  
-👉 [Open Policy PDF](images/policy.pdf)
+<p align="center">
+  <img src="images/policy-preview.png" width="700">
+</p>
+
+<p align="center">
+  <a href="images/policy.pdf" target="_blank">
+    <img src="https://img.shields.io/badge/View%20Full%20Policy-PDF-blue?style=for-the-badge" />
+  </a>
+</p>
 
 ---
 
