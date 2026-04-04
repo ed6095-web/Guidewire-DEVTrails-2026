@@ -239,7 +239,6 @@ xychart-beta
   <img src="images/registration.png" width="700">
 </p>
 
----
 
 # Insurance Policy Management
 
@@ -258,7 +257,6 @@ xychart-beta
   </a>
 </p>
 
----
 
 # Dynamic Premium Calculation
 
