@@ -75,7 +75,27 @@ Real-time compensation.
   <img src="images/persona.png" width="750">
 </p>
 
+### User Personas
+
+| Attribute | Full-Time Earner | Part-Time Earner |
+| :--- | :--- | :--- |
+| **Primary Goal** | Sustaining livelihood and supporting a family. | Earning extra cash for specific goals or expenses. |
+| **Weekly Earnings** | ₹5,000 - ₹8,000+ | ₹1,500 - ₹3,000 |
+| **Time on Road** | 10–12 hours/day | 3–5 hours/day (Weekends/Evenings) |
+| **Premium Structure** | Flat weekly micro-premium | Proportional (per-shift/trip deduction) |
+| **Income Impact** | Severe (Affects household budget) | Moderate (Affects supplemental goals) |
+
 ---
+
+### Geographical Personas
+
+| Attribute | Urban Worker (Tier 1 & 2) | Rural / Semi-Urban Worker (Tier 3 & 4) |
+| :--- | :--- | :--- |
+| **Primary Gig Types** | Food delivery, quick-commerce, ride-hailing. | E-commerce last-mile, agri-logistics, inter-village transport. |
+| **Key Threats** | Localized waterlogging, severe AQI spikes, heatwaves. | Unpaved road washouts, bridge submersions, district-level flooding. |
+| **Impact of Disruption** | **Time lost.** 50mm of rain causes massive traffic gridlock, drastically reducing hourly delivery volume. | **Total halt.** 50mm of rain severs route access entirely, destroying the whole day's earning potential. |
+| **Coverage Need** | Needs **partial payouts** for micro-disruptions (e.g., compensating a 3-hour heavy storm). | Needs **full payouts** for total day loss (e.g., compensating a washed-out delivery route). |
+| **Anti-Spoofing Focus** | Detecting sophisticated GPS spoofing and intentional app-tampering. | Differentiating between poor network/natural GPS drops and actual fraudulent anomalies. |
 
 # Workflow Scenario
 
