@@ -3,9 +3,33 @@
 </div>
 
 <p align="center">
-  <b>Phase 1 Strategy & System Concept</b><br>
+  <b>Phase 2 System Design & Execution</b><br>
   <i>A data-driven safety net for India's gig economy</i>
 </p>
+
+---
+
+# Table of Contents
+
+* [Problem Statement](#-problem-statement)
+* [Why This Matters](#why-this-matters)
+* [Proposed Concept](#proposed-concept-kavachsathi)
+* [Core System Pillars](#core-system-pillars)
+* [Target User Persona](#target-user-persona)
+* [Workflow Scenario](#workflow-scenario)
+* [System Architecture](#system-architecture)
+* [Decision Engine](#decision-engine-core-innovation)
+* [Decision Tree](#decision-tree)
+* [Trigger Table](#trigger-table)
+* [Risk-Capping Mechanism](#risk-capping-mechanism)
+* [Segment-Specific Insights](#segment-specific-insights)
+* [Financial Viability Analysis](#financial-viability-analysis)
+* [Exclusions and Regulatory Awareness](#exclusions-and-regulatory-awareness)
+* [Adversarial Defense](#adversarial-defense--anti-spoofing-strategy)
+* [Technology Stack](#technology-stack)
+* [Development Roadmap](#development-roadmap)
+* [Team](#team)
+* [Vision](#vision)
 
 ---
 
@@ -15,11 +39,11 @@ India’s gig economy relies on delivery partners who earn daily wages strictly 
 
 However, workers face income loss due to uncontrollable external disruptions such as:
 
-- Heavy Rain  
-- Extreme Heatwaves  
-- Severe Air Pollution  
-- Mobility Restrictions (road blockages, restricted zones)  
-- Platform Activity Anomalies  
+* Heavy Rain
+* Extreme Heatwaves
+* Severe Air Pollution
+* Mobility Restrictions
+* Platform Activity Anomalies
 
 During such events, workers may lose **20–30% of their weekly income**, and there is no real-time protection system.
 
@@ -54,17 +78,21 @@ If disruptions reduce earning capacity, the system automatically compensates inc
 # Core System Pillars
 
 ### 1. Weekly Micro-Premiums
+
 Aligned with gig workers’ earning cycle.
 
 ### 2. Algorithmic Risk Scoring
-- Weather conditions  
-- Platform activity (proxy-based)  
-- Mobility constraints  
+
+* Weather conditions
+* Platform activity (proxy-based)
+* Mobility constraints
 
 ### 3. Zero-Touch Claims
+
 No manual intervention.
 
 ### 4. Instant Wallet Payouts
+
 Real-time compensation.
 
 ---
@@ -77,25 +105,15 @@ Real-time compensation.
 
 ### User Personas
 
-| Attribute | Full-Time Earner | Part-Time Earner |
-| :--- | :--- | :--- |
-| **Primary Goal** | Sustaining livelihood and supporting a family. | Earning extra cash for specific goals or expenses. |
-| **Weekly Earnings** | ₹5,000 - ₹8,000+ | ₹1,500 - ₹3,000 |
-| **Time on Road** | 10–12 hours/day | 3–5 hours/day (Weekends/Evenings) |
-| **Premium Structure** | Flat weekly micro-premium | Proportional (per-shift/trip deduction) |
-| **Income Impact** | Severe (Affects household budget) | Moderate (Affects supplemental goals) |
+| Attribute         | Full-Time Earner      | Part-Time Earner    |
+| :---------------- | :-------------------- | :------------------ |
+| Primary Goal      | Sustaining livelihood | Supplemental income |
+| Weekly Earnings   | ₹5,000 - ₹8,000+      | ₹1,500 - ₹3,000     |
+| Time on Road      | 10–12 hrs/day         | 3–5 hrs/day         |
+| Premium Structure | Fixed weekly          | Usage-based         |
+| Income Impact     | Severe                | Moderate            |
 
 ---
-
-### Geographical Personas
-
-| Attribute | Urban Worker (Tier 1 & 2) | Rural / Semi-Urban Worker (Tier 3 & 4) |
-| :--- | :--- | :--- |
-| **Primary Gig Types** | Food delivery, quick-commerce, ride-hailing. | E-commerce last-mile, agri-logistics, inter-village transport. |
-| **Key Threats** | Localized waterlogging, severe AQI spikes, heatwaves. | Unpaved road washouts, bridge submersions, district-level flooding. |
-| **Impact of Disruption** | **Time lost.** 50mm of rain causes massive traffic gridlock, drastically reducing hourly delivery volume. | **Total halt.** 50mm of rain severs route access entirely, destroying the whole day's earning potential. |
-| **Coverage Need** | Needs **partial payouts** for micro-disruptions (e.g., compensating a 3-hour heavy storm). | Needs **full payouts** for total day loss (e.g., compensating a washed-out delivery route). |
-| **Anti-Spoofing Focus** | Detecting sophisticated GPS spoofing and intentional app-tampering. | Differentiating between poor network/natural GPS drops and actual fraudulent anomalies. |
 
 # Workflow Scenario
 
@@ -104,10 +122,11 @@ Rahul earns ₹5000/week.
 A disruption causes ₹1500 loss.
 
 System:
-1. Detects disruption  
-2. Validates conditions  
-3. Calculates risk  
-4. Triggers payout  
+
+1. Detects disruption
+2. Validates conditions
+3. Calculates risk
+4. Triggers payout
 
 Result: ₹800 credited instantly.
 
@@ -132,27 +151,31 @@ G --> H[Wallet Credit]
 # System Architecture
 
 <p align="center">
-  <img src="images/architecture.png" width="570">
+  <img src="images/architecture.png" width="600">
 </p>
 
-- Backend aggregates real-time signals from multiple data oracles  
-- AI Risk Engine computes disruption impact score  
-- POP Validator performs fraud detection before claim approval  
-- Smart Trigger Logic activates payouts when thresholds are crossed  
+* Backend aggregates real-time signals from multiple data sources
+* AI Risk Engine computes disruption impact score
+* POP Validator performs fraud detection
+* Smart Trigger Logic activates payouts
 
 ---
 
 # Decision Engine (Core Innovation)
 
-<p align="center">
-  <img src="images/decision.png" width="590">
-</p>
-
 ```text
 Risk Score = (Environment × 0.4) + (Platform × 0.4) + (Mobility × 0.2)
 ```
 
-Weights reflect real-world impact on income and are dynamically adjustable.
+Weights reflect real-world impact on income.
+
+### Example
+
+Environment = 80
+Platform = 60
+Mobility = 40
+
+Risk Score = 64 → Partial payout
 
 ### Payout Logic
 
@@ -161,13 +184,6 @@ Risk > 70 → High Payout
 40–70 → Partial  
 < 40 → No Payout  
 ```
-
-Thresholds are calibrated using historical disruption vs income loss patterns and can be dynamically tuned.
-
-Example:
-Environment = 80, Platform = 60, Mobility = 40  
-Risk Score = 0.4(80) + 0.4(60) + 0.2(40) = 64  
-→ Partial payout triggered
 
 ---
 
@@ -201,8 +217,6 @@ M -- Yes --> N[Payout]
 M -- No --> I
 ```
 
-These payouts are derived based on disruption severity and its real-world impact on earnings:
-
 ```mermaid
 xychart-beta
     title "Trigger-wise Payout Distribution (₹)"
@@ -211,42 +225,85 @@ xychart-beta
     bar [250,200,150,350,300]
 ```
 
-## Trigger Table
+---
 
-| Category | Trigger | Condition | Payout |
-|----------|--------|----------|--------|
-| Environmental | Heavy Rain | Rainfall > 60mm | ₹250 |
-| Environmental | Extreme Heat | Temperature > 45°C | ₹200 |
-| Environmental | Pollution | AQI > 400 | ₹150 |
-| Platform | Activity Anomaly | Proxy-based demand drop / downtime | ₹350 |
-| Mobility | Mobility Restriction | Route blockage / restricted zone | ₹300 |
+# Trigger Table
+
+| Category      | Trigger          | Condition              | Payout |
+| ------------- | ---------------- | ---------------------- | ------ |
+| Environmental | Heavy Rain       | Rainfall > 60mm        | ₹250   |
+| Environmental | Extreme Heat     | Temperature > 45°C     | ₹200   |
+| Environmental | Pollution        | AQI > 400              | ₹150   |
+| Platform      | Activity Anomaly | Demand drop / downtime | ₹350   |
+| Mobility      | Restriction      | Route blockage         | ₹300   |
+
+---
+
+# Risk-Capping Mechanism
+
+* Weekly payout caps prevent over-exposure
+* Event-level payout limits restrict abuse
+* High-loss zones trigger dynamic premium adjustment
+* System pauses new enrollments if loss ratio exceeds threshold
+
+---
+
+# Segment-Specific Insights
+
+| Segment   | Insight                               |
+| --------- | ------------------------------------- |
+| Urban     | Partial disruptions reduce efficiency |
+| Rural     | Full disruption stops income          |
+| Full-Time | High dependency → higher coverage     |
+| Part-Time | Flexible micro-coverage               |
+
+---
+
+# Financial Viability Analysis
+
+* Weekly premium: ₹20–₹50
+* Target payout ratio: 60–70%
+* Profit margin: ~30%
+
+Example:
+1000 users × ₹40 = ₹40,000
+Payout (65%) = ₹26,000
+Profit = ₹14,000
+
+---
+
+# Exclusions and Regulatory Awareness
+
+### Exclusions
+
+* Health insurance
+* Vehicle damage
+* Personal accidents
+
+### Compliance
+
+* Parametric insurance model
+* Transparent trigger-based payouts
+* Requires insurer partnership (IRDAI compliance)
 
 ---
 
 # Adversarial Defense & Anti-Spoofing Strategy
 
-## Core Principle
+### Core Principle
 
-The system does not rely on GPS alone.
+Multi-signal validation beyond GPS.
 
-It validates behavioral consistency across multiple independent signals.
+### Signals Used
 
----
+* GPS
+* Motion
+* Network
+* Traffic
+* Platform activity
+* Historical patterns
 
-## Multi-Signal Validation
-
-- GPS location  
-- Device motion  
-- Network behavior  
-- Traffic correlation  
-- Platform activity patterns  
-- Historical movement  
-- Cluster detection
-- Platform anomalies are inferred using proxy signals such as order frequency drop, idle time, and cluster-based inactivity patterns.
-
----
-
-## Fraud Detection Model
+### Fraud Model
 
 ```text
 Fraud Score = (Motion × 0.3) + (Network × 0.2) + (Location × 0.3) + (Cluster × 0.2)
@@ -254,90 +311,36 @@ Fraud Score = (Motion × 0.3) + (Network × 0.2) + (Location × 0.3) + (Cluster 
 
 ---
 
-## Anti-Spoofing Architecture
-
-```mermaid
-flowchart TD
-
-A[User Activity] --> B[GPS Signal]
-A --> C[Motion Pattern]
-A --> D[Network Behavior]
-A --> E[Traffic API]
-A --> F[Platform Activity]
-
-B --> G[POP Validator]
-C --> G
-D --> G
-E --> G
-F --> G
-
-G --> H{Behavior Consistent?}
-
-H -- No --> I[Flag Suspicious]
-
-H -- Yes --> J[Trusted Data]
-
-I --> K[Fraud Scoring Engine]
-J --> K
-
-K --> L{Fraud Score High?}
-
-L -- Yes --> M[Delay / Block Claim]
-L -- No --> N[Forward to Risk Engine]
-
-N --> O[Smart Trigger Logic]
-O --> P[Payout Decision]
-```
-
----
-
-## UX Balance
-
-- Suspicious cases are delayed, not instantly rejected  
-- Partial payouts allowed for borderline cases  
-- Repeated anomalies trigger stricter checks  
-
----
-
 # Technology Stack
 
-| Layer | Technology |
-|------|-----------|
-| Frontend | React.js / Next.js |
-| Backend | Node.js + Express |
-| Database | MongoDB |
-| AI / ML | Python, Scikit-learn |
-| APIs | Weather, Traffic |
-| Payments | Razorpay Sandbox |
+| Layer    | Technology       |
+| -------- | ---------------- |
+| Frontend | React / Next.js  |
+| Backend  | Node.js          |
+| Database | MongoDB          |
+| AI       | Python           |
+| APIs     | Weather, Traffic |
+| Payments | Razorpay         |
 
 ---
 
 # Development Roadmap
 
-### Phase 1
-- Concept + architecture  
-- Trigger modeling  
-
-### Phase 2
-- API integration  
-- Risk engine  
-
-### Phase 3
-- Automation  
-- Fraud detection  
-- Deployment  
+Phase 1 → Concept
+Phase 2 → API + Risk Engine
+Phase 3 → Automation + Deployment
 
 ---
 
 # Team
 
-| Member | Role |
-|------|------|
-| Eashan Darsh | System Architecture & Frontend |
-| Ved Deshmukh | Research |
-| Shashwat Chaturvedi | Backend |
-| Sneha Basera | Data Collection |
-| Asim Shankar | AI / ML |
+| Member              | Role                |
+| ------------------- | ------------------- |
+| Eashan Darsh        | System Architecture |
+| Ved Deshmukh        | Research            |
+| Shashwat Chaturvedi | Backend             |
+| Sneha Basera        | Data                |
+| Asim Shankar        | AI                  |
 
 ---
 
