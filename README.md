@@ -412,22 +412,6 @@ Unified analytics layer for workers and insurers.
   <img src="images/dashboard-worker.png" width="700">
 </p>
 
----
-
-# Admin Dashboard
-
-* Total active users
-* Premium collected vs payouts
-* Loss ratios
-* High-risk zones heatmap
-* Fraud alerts
-* Predictive analytics for next week weather/disruption claims
-
-<p align="center">
-  <img src="images/dashboard-admin.png" width="700">
-</p>
-
----
 
 # Zero-Touch Claim Workflow
 
