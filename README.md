@@ -473,7 +473,7 @@ sequenceDiagram
 * Node.js v18+
 * Python 3.9+
 * Git
-* MongoDB
+* FireBase
 
 ## Step 1 — Clone Repository
 
