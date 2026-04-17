@@ -350,7 +350,7 @@ F -- No --> H[Send to Risk Engine]
 
 ---
 
-# 🚀 PHASE 3 – INTELLIGENCE & SCALE
+# 🔷 PHASE 3 – INTELLIGENCE & SCALE
 
 # Advanced Fraud Detection
 
@@ -567,5 +567,3 @@ Phase 3 → Intelligence, Fraud AI, Dashboards, Instant Payouts
 KavachSathi transforms insurance into real-time protection.
 
 From claim-based insurance to trigger-based protection.
-
-*Source base updated from your latest README draft *
