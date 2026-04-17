@@ -511,7 +511,7 @@ python app.py
 Frontend (Next.js)            :3000
 Backend REST Engine (FastAPI) :8000
 ML Engine (Python)            :5001
-MongoDB                       :27017
+FireBase                      :27017
 ```
 
 ---
