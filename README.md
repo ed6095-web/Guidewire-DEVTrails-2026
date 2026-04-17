@@ -557,7 +557,7 @@ Phase 3 → Intelligence, Fraud AI, Dashboards, Instant Payouts
 | Eashan Darsh        | System Architecture |
 | Ved Deshmukh        | Research            |
 | Shashwat Chaturvedi | Backend             |
-| Sneha Basera        | Data                |
+| Sneha Basera        | DataBase                |
 | Asim Shankar        | AI                  |
 
 ---
